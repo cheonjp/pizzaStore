@@ -1,0 +1,73 @@
+$t1: #6e6e6e;
+$p2:#975102;
+$p3:#d9643a;
+$p4:#9e2b02;
+$p5:#a17402;
+$p6:#30260a;
+
+@mixin h1{
+    color: $p2;
+    font-size:2em;
+    font-weight: bold;
+}
+
+
+#header{
+    display: flex;
+    position:relative;
+    .phone-menu{
+        height:0;
+        position:absolute;
+        right:30px;
+        top:30px;
+        cursor:pointer;
+        height:20px;
+        div{
+            width:20px;
+            background-color:black;
+            height:3px;
+            margin-bottom:5px;
+            
+        }
+    }
+}
+
+#hero-section{
+    postion:relative;
+    img{
+        width:50%;
+        max-width:800px;
+        min-width:300px;
+        margin-right:0;
+        position: absolute;
+        right:0;
+        
+    }
+    .hero{
+        @include h1;
+        position:absolute;
+        top:330px;
+        z-index:1;
+        margin-left:10%;
+        font-family: 'Noto Serif KR', serif;
+    }
+    .p1{
+        position: absolute;
+        top: 650px;
+        max-width:450px;
+        width:86%;
+        font-family: 'Noto Sans KR', sans-serif;
+        margin-left:10%;
+        color:$t1;
+    }
+    .p2{
+        position: absolute;
+        top: 750px;
+        max-width:450px;
+        width:85%;
+        font-family: 'Noto Sans KR', sans-serif;
+        margin-left:10%;
+        color:$t1;
+    }
+}
+

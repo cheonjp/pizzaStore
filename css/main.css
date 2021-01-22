@@ -1,0 +1,67 @@
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+#header .phone-menu {
+  height: 0;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+  height: 20px;
+}
+
+#header .phone-menu div {
+  width: 20px;
+  background-color: black;
+  height: 3px;
+  margin-bottom: 5px;
+}
+
+#hero-section {
+  postion: relative;
+}
+
+#hero-section img {
+  width: 50%;
+  max-width: 800px;
+  min-width: 300px;
+  margin-right: 0;
+  position: absolute;
+  right: 0;
+}
+
+#hero-section .hero {
+  color: #975102;
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 330px;
+  z-index: 1;
+  margin-left: 10%;
+  font-family: 'Noto Serif KR', serif;
+}
+
+#hero-section .p1 {
+  position: absolute;
+  top: 650px;
+  max-width: 450px;
+  width: 86%;
+  font-family: 'Noto Sans KR', sans-serif;
+  margin-left: 10%;
+  color: #6e6e6e;
+}
+
+#hero-section .p2 {
+  position: absolute;
+  top: 750px;
+  max-width: 450px;
+  width: 85%;
+  font-family: 'Noto Sans KR', sans-serif;
+  margin-left: 10%;
+  color: #6e6e6e;
+}
+/*# sourceMappingURL=main.css.map */
