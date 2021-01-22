@@ -11,8 +11,11 @@ $p6:#30260a;
     font-weight: bold;
 }
 
-body{
+*{
     box-sizing: border-box;
+}
+body{
+    margin:0;
 }
 
 .col-1{width:8.33%;}
@@ -32,6 +35,9 @@ body{
 #header{
     display: flex;
     position:relative;
+    a{
+        margin: 10px 0 0 30px;
+    }
     .phone-menu{
         height:0;
         position:absolute;
@@ -50,41 +56,76 @@ body{
 }
 
 #hero-section{
-    postion:relative;
-    img{
-        width:50%;
-        max-width:800px;
-        min-width:300px;
-        margin-right:0;
-        position: absolute;
-        right:0;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-left:40px;
+    position: relative;
+    .hero{
+        z-index: 1;
+        flex:100%;
+        margin-top:-100px;
+        margin-right:40px;
+        h1{
+            font-family: 'Noto Serif KR', 'Arial';
+            color: $p2;
+            font-size:3em;
+        }
+        p{
+           font-family: 'Noto Sans KR', 'Arial';
+           color:$t1;
+        }
         
     }
-    .hero{
-        @include h1;
-        position:absolute;
-        top:330px;
-        z-index:1;
-        margin-left:10%;
-        font-family: 'Noto Serif KR', serif;
-    }
-    .p1{
-        position: absolute;
-        top: 650px;
-        max-width:450px;
-        width:86%;
-        font-family: 'Noto Sans KR', sans-serif;
-        margin-left:10%;
-        color:$t1;
-    }
-    .p2{
-        position: absolute;
-        top: 750px;
-        max-width:450px;
-        width:85%;
-        font-family: 'Noto Sans KR', sans-serif;
-        margin-left:10%;
-        color:$t1;
+    .image{
+        flex:100%;
+        
+        img{
+            width:100%;
+            min-width:300px;
+        }
     }
 }
+
+#introduction{
+    background-image:url('../img/chef-background.jpg');
+    margin-top:100px;
+    background-size:cover;
+    padding:50px 40px 50px 40px;
+    .greeding{
+        background-color:white;
+        border-radius: 25px;
+        padding:25px;
+        h2{
+            text-align: center;
+            font-family: 'Noto Serif KR', 'Arial';
+            color:$p2;
+            font-size:2em;
+            
+        }
+        p{
+            font-family: 'Noto Sans KR', 'Arial';
+            color:$t1;
+        }
+        .material-icons{
+            color:$p3;
+            font-size:50px;
+            text-align: center;
+            display:block;
+        }
+        h3{
+            text-align: center;
+            font-size:1.1em;
+            font-family: 'Noto Sans KR', 'Arial';
+            color:$p3;
+
+        }
+        .icon-word{
+            font-family: 'Noto Sans KR', 'Arial';
+            width:200px;
+            margin: auto;
+        }
+    }
+}
+
 

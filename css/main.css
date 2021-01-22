@@ -1,6 +1,10 @@
-body {
+* {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  margin: 0;
 }
 
 .col-1 {
@@ -58,6 +62,10 @@ body {
   position: relative;
 }
 
+#header a {
+  margin: 10px 0 0 30px;
+}
+
 #header .phone-menu {
   height: 0;
   position: absolute;
@@ -75,46 +83,91 @@ body {
 }
 
 #hero-section {
-  postion: relative;
-}
-
-#hero-section img {
-  width: 50%;
-  max-width: 800px;
-  min-width: 300px;
-  margin-right: 0;
-  position: absolute;
-  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-left: 40px;
+  position: relative;
 }
 
 #hero-section .hero {
+  z-index: 1;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  margin-top: -100px;
+  margin-right: 40px;
+}
+
+#hero-section .hero h1 {
+  font-family: 'Noto Serif KR', 'Arial';
+  color: #975102;
+  font-size: 3em;
+}
+
+#hero-section .hero p {
+  font-family: 'Noto Sans KR', 'Arial';
+  color: #6e6e6e;
+}
+
+#hero-section .image {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+
+#hero-section .image img {
+  width: 100%;
+  min-width: 300px;
+}
+
+#introduction {
+  background-image: url("../img/chef-background.jpg");
+  margin-top: 100px;
+  background-size: cover;
+  padding: 50px 40px 50px 40px;
+}
+
+#introduction .greeding {
+  background-color: white;
+  border-radius: 25px;
+  padding: 25px;
+}
+
+#introduction .greeding h2 {
+  text-align: center;
+  font-family: 'Noto Serif KR', 'Arial';
   color: #975102;
   font-size: 2em;
-  font-weight: bold;
-  position: absolute;
-  top: 330px;
-  z-index: 1;
-  margin-left: 10%;
-  font-family: 'Noto Serif KR', serif;
 }
 
-#hero-section .p1 {
-  position: absolute;
-  top: 650px;
-  max-width: 450px;
-  width: 86%;
-  font-family: 'Noto Sans KR', sans-serif;
-  margin-left: 10%;
+#introduction .greeding p {
+  font-family: 'Noto Sans KR', 'Arial';
   color: #6e6e6e;
 }
 
-#hero-section .p2 {
-  position: absolute;
-  top: 750px;
-  max-width: 450px;
-  width: 85%;
-  font-family: 'Noto Sans KR', sans-serif;
-  margin-left: 10%;
-  color: #6e6e6e;
+#introduction .greeding .material-icons {
+  color: #d9643a;
+  font-size: 50px;
+  text-align: center;
+  display: block;
+}
+
+#introduction .greeding h3 {
+  text-align: center;
+  font-size: 1.1em;
+  font-family: 'Noto Sans KR', 'Arial';
+  color: #d9643a;
+}
+
+#introduction .greeding .icon-word {
+  font-family: 'Noto Sans KR', 'Arial';
+  width: 200px;
+  margin: auto;
 }
 /*# sourceMappingURL=main.css.map */
