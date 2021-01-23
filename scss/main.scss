@@ -1,178 +1,203 @@
 $t1: #6e6e6e;
-$p2:#975102;
-$p3:#d9643a;
-$p4:#9e2b02;
-$p5:#a17402;
-$p6:#30260a;
+$p2: #975102;
+$p3: #d9643a;
+$p4: #9e2b02;
+$p5: #a17402;
+$p6: #30260a;
 
-@mixin h1{
-    color: $p2;
-    font-size:2em;
-    font-weight: bold;
+@mixin h1 {
+  color: $p2;
+  font-size: 2em;
+  font-weight: bold;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    margin:0;
+body {
+  margin: 0;
 }
 
-.col-1{width:8.33%;}
-.col-2{width:16.66%;}
-.col-3{width:25%;}
-.col-4{width:33.33%;}
-.col-5{width:41.66%;}
-.col-6{width:50%;}
-.col-7{width:58.33%;}
-.col-8{width:66.66%;}
-.col-9{width:75%;}
-.col-10{width:83.33%;}
-.col-11{width:91.66%;}
-.col-12{width:100%;}
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
 
-
-#header{
-    display: flex;
-    position:relative;
-    a{
-        margin: 10px 0 0 30px;
+#header {
+  display: flex;
+  position: relative;
+  a {
+    margin: 10px 0 0 30px;
+  }
+  .phone-menu {
+    height: 0;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    height: 20px;
+    div {
+      width: 20px;
+      background-color: black;
+      height: 3px;
+      margin-bottom: 5px;
     }
-    .phone-menu{
-        height:0;
-        position:absolute;
-        right:30px;
-        top:30px;
-        cursor:pointer;
-        height:20px;
-        div{
-            width:20px;
-            background-color:black;
-            height:3px;
-            margin-bottom:5px;
-            
-        }
-    }
+  }
 }
 
-#hero-section{
-    display:flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    margin-left:40px;
+#hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-left: 40px;
+  position: relative;
+  .hero {
+    z-index: 1;
+    flex: 100%;
+    margin-top: -100px;
+    margin-right: 40px;
+    h1 {
+      font-family: "Noto Serif KR", "Arial";
+      color: $p2;
+      font-size: 3em;
+    }
+    p {
+      font-family: "Noto Sans KR", "Arial";
+      color: $t1;
+    }
+  }
+  .image {
+    flex: 100%;
+
+    img {
+      width: 100%;
+      min-width: 300px;
+    }
+  }
+}
+
+#introduction {
+  background-image: url("../img/chef-background.jpg");
+  margin-top: 100px;
+  background-size: cover;
+  padding: 50px 40px 50px 40px;
+  .greeding {
+    background-color: white;
+    border-radius: 25px;
+    padding: 25px 25px 150px 25px;
+    h2 {
+      text-align: center;
+      font-family: "Noto Serif KR", "Arial";
+      color: $p2;
+      font-size: 2em;
+    }
+    p {
+      font-family: "Noto Sans KR", "Arial";
+      color: $t1;
+    }
+    .icon {
+      color: $p3;
+      font-size: 50px;
+      text-align: center;
+      display: block;
+    }
+    h3 {
+      text-align: center;
+      font-size: 1.1em;
+      font-family: "Noto Sans KR", "Arial";
+      color: $p3;
+      margin-top: 10px;
+    }
+    .icon-word {
+      font-family: "Noto Sans KR", "Arial";
+      width: 200px;
+      margin: auto;
+    }
+  }
+}
+
+.btn {
+  border: 1px solid $p3;
+  text-transform: uppercase;
+  overflow: hidden;
+  display: block;
+  background: none;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: $p3;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Noto Sans KR", "Arial";
+  position: relative;
+  transition: 0.3s ease-in-out;
+
+  letter-spacing: 0;
+  .arrow {
+    vertical-align: middle;
+  }
+  &:hover {
+    color: white;
+    border:0px solid rgba(255,255,255,0);
+    letter-spacing: 1px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $p3;
+    transform: translateX(-100%);
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover:before {
+    transform: translateX(0);
+  }
+}
+#btn-position{
     position: relative;
-    .hero{
-        z-index: 1;
-        flex:100%;
-        margin-top:-100px;
-        margin-right:40px;
-        h1{
-            font-family: 'Noto Serif KR', 'Arial';
-            color: $p2;
-            font-size:3em;
-        }
-        p{
-           font-family: 'Noto Sans KR', 'Arial';
-           color:$t1;
-        }
-        
-    }
-    .image{
-        flex:100%;
-        
-        img{
-            width:100%;
-            min-width:300px;
-        }
+    z-index:1;
+    div{
+        position:absolute;
+        top:-150px;
+        right:70px;
     }
 }
-
-#introduction{
-    background-image:url('../img/chef-background.jpg');
-    margin-top:100px;
-    background-size:cover;
-    padding:50px 40px 50px 40px;
-    .greeding{
-        background-color:white;
-        border-radius: 25px;
-        padding:25px;
-        h2{
-            text-align: center;
-            font-family: 'Noto Serif KR', 'Arial';
-            color:$p2;
-            font-size:2em;
-            
-        }
-        p{
-            font-family: 'Noto Sans KR', 'Arial';
-            color:$t1;
-        }
-        .icon{
-            color:$p3;
-            font-size:50px;
-            text-align: center;
-            display:block;
-        }
-        h3{
-            text-align: center;
-            font-size:1.1em;
-            font-family: 'Noto Sans KR', 'Arial';
-            color:$p3;
-            margin-top:10px;
-
-        }
-        .icon-word{
-            font-family: 'Noto Sans KR', 'Arial';
-            width:200px;
-            margin: auto;
-        }
-        .btn{
-            border: 1px solid $p3;
-            text-transform: uppercase;
-            overflow:hidden;
-            display:block;
-            background:none;
-            text-decoration: none;
-            outline:none;
-            cursor:pointer;
-            color:$p3;
-            border-radius: 30px;
-            padding:10px 20px;
-            font-size:20px;
-            font-family: 'Noto Sans KR', 'Arial';
-            position:relative;
-            transition:0.5s;
-            
-
-            letter-spacing:0;
-            .arrow{
-                vertical-align: middle;
-
-            }
-            &:hover{
-                color:black;
-            }
-            &::before{
-                content:'';
-                position:absolute;
-                z-index: -1;
-    
-                top:0; 
-                left:0;
-                right:0;
-                bottom:0;
-                background-color:$p3;
-                transform: translateX(-100%);
-                
-            }
-           
-            &:hover:before{
-                transform: translateX(0);
-                transition: 0.5s ease-in-out;
-            }
-        }
-
-    }
-}
-
-

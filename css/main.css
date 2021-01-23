@@ -105,13 +105,13 @@ body {
 }
 
 #hero-section .hero h1 {
-  font-family: 'Noto Serif KR', 'Arial';
+  font-family: "Noto Serif KR", "Arial";
   color: #975102;
   font-size: 3em;
 }
 
 #hero-section .hero p {
-  font-family: 'Noto Sans KR', 'Arial';
+  font-family: "Noto Sans KR", "Arial";
   color: #6e6e6e;
 }
 
@@ -136,18 +136,18 @@ body {
 #introduction .greeding {
   background-color: white;
   border-radius: 25px;
-  padding: 25px;
+  padding: 25px 25px 150px 25px;
 }
 
 #introduction .greeding h2 {
   text-align: center;
-  font-family: 'Noto Serif KR', 'Arial';
+  font-family: "Noto Serif KR", "Arial";
   color: #975102;
   font-size: 2em;
 }
 
 #introduction .greeding p {
-  font-family: 'Noto Sans KR', 'Arial';
+  font-family: "Noto Sans KR", "Arial";
   color: #6e6e6e;
 }
 
@@ -161,18 +161,18 @@ body {
 #introduction .greeding h3 {
   text-align: center;
   font-size: 1.1em;
-  font-family: 'Noto Sans KR', 'Arial';
+  font-family: "Noto Sans KR", "Arial";
   color: #d9643a;
   margin-top: 10px;
 }
 
 #introduction .greeding .icon-word {
-  font-family: 'Noto Sans KR', 'Arial';
+  font-family: "Noto Sans KR", "Arial";
   width: 200px;
   margin: auto;
 }
 
-#introduction .greeding .btn {
+.btn {
   border: 1px solid #d9643a;
   text-transform: uppercase;
   overflow: hidden;
@@ -185,23 +185,25 @@ body {
   border-radius: 30px;
   padding: 10px 20px;
   font-size: 20px;
-  font-family: 'Noto Sans KR', 'Arial';
+  font-family: "Noto Sans KR", "Arial";
   position: relative;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   letter-spacing: 0;
 }
 
-#introduction .greeding .btn .arrow {
+.btn .arrow {
   vertical-align: middle;
 }
 
-#introduction .greeding .btn:hover {
-  color: black;
+.btn:hover {
+  color: white;
+  border: 0px solid rgba(255, 255, 255, 0);
+  letter-spacing: 1px;
 }
 
-#introduction .greeding .btn::before {
-  content: '';
+.btn::before {
+  content: "";
   position: absolute;
   z-index: -1;
   top: 0;
@@ -211,12 +213,23 @@ body {
   background-color: #d9643a;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-#introduction .greeding .btn:hover:before {
+.btn:hover:before {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+}
+
+#btn-position {
+  position: relative;
+  z-index: 1;
+}
+
+#btn-position div {
+  position: absolute;
+  top: -150px;
+  right: 70px;
 }
 /*# sourceMappingURL=main.css.map */
