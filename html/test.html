@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .btn {
+  border: 1px solid #d9643a;
+  text-transform: uppercase;
+  overflow: hidden;
+  display: block;
+  background: none;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: #d9643a;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'Noto Sans KR', 'Arial';
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  letter-spacing: 0;
+}
+
+ .btn .arrow {
+  vertical-align: middle;
+}
+
+ .btn:hover {
+  color: black;
+}
+
+ .btn::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d9643a;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+ .btn:hover:before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+    </style>
+</head>
+<body>
+    
+    <button class="btn">이벤트 바로가기 <span class="material-icons arrow">
+        chevron_right
+        </span></button>
+</body>
+</html>

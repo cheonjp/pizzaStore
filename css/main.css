@@ -151,7 +151,7 @@ body {
   color: #6e6e6e;
 }
 
-#introduction .greeding .material-icons {
+#introduction .greeding .icon {
   color: #d9643a;
   font-size: 50px;
   text-align: center;
@@ -163,11 +163,60 @@ body {
   font-size: 1.1em;
   font-family: 'Noto Sans KR', 'Arial';
   color: #d9643a;
+  margin-top: 10px;
 }
 
 #introduction .greeding .icon-word {
   font-family: 'Noto Sans KR', 'Arial';
   width: 200px;
   margin: auto;
+}
+
+#introduction .greeding .btn {
+  border: 1px solid #d9643a;
+  text-transform: uppercase;
+  overflow: hidden;
+  display: block;
+  background: none;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: #d9643a;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'Noto Sans KR', 'Arial';
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  letter-spacing: 0;
+}
+
+#introduction .greeding .btn .arrow {
+  vertical-align: middle;
+}
+
+#introduction .greeding .btn:hover {
+  color: black;
+}
+
+#introduction .greeding .btn::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d9643a;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+#introduction .greeding .btn:hover:before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 /*# sourceMappingURL=main.css.map */
