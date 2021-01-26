@@ -174,7 +174,6 @@ body {
 
 .btn {
   border: 1px solid #d9643a;
-  text-transform: uppercase;
   overflow: hidden;
   display: block;
   background: none;
@@ -189,7 +188,6 @@ body {
   position: relative;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  letter-spacing: 0;
 }
 
 .btn .arrow {
@@ -198,11 +196,10 @@ body {
 
 .btn:hover {
   color: white;
-  border: 0px solid rgba(255, 255, 255, 0);
   letter-spacing: 1px;
 }
 
-.btn::before {
+.btn::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -217,7 +214,7 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-.btn:hover:before {
+.btn:hover:after {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
@@ -231,5 +228,47 @@ body {
   position: absolute;
   top: -150px;
   right: 70px;
+}
+
+#section2 {
+  position: relative;
+  padding: 100px 40px 32px 40px;
+}
+
+#section2 h1 {
+  color: #975102;
+  font-size: 2.5em;
+  font-family: "Noto Sans KR", "Arial";
+  font-weight: bold;
+}
+
+#section2 .circle {
+  width: 500px;
+  height: 500px;
+  background-color: #d9643a;
+  opacity: .2;
+  border-radius: 100%;
+  position: absolute;
+  top: -100px;
+  left: -250px;
+  z-index: -1;
+}
+
+#section2 p {
+  font-family: "Noto Sans KR", "Arial";
+  color: #6e6e6e;
+}
+
+#section2 #images {
+  width: 100%;
+  margin-top: 50px;
+}
+
+#section2 #images .img {
+  background-image: url("../img/display.jpg");
+  background-size: cover;
+  margin: auto;
+  width: 400px;
+  height: 400px;
 }
 /*# sourceMappingURL=main.css.map */

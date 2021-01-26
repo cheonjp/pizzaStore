@@ -11,6 +11,49 @@ $p6: #30260a;
   font-weight: bold;
 }
 
+@mixin btn-style{
+  border: 1px solid $p3;
+  overflow: hidden;
+  display: block;
+  background: none;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: $p3;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Noto Sans KR", "Arial";
+  position: relative;
+  transition: 0.3s ease-in-out;
+
+  .arrow {
+    vertical-align: middle;
+  }
+  &:hover {
+    color: white;
+    // border:0px solid rgba(255,255,255,0);
+    letter-spacing: 1px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $p3;
+    transform: translateX(-100%);
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover:after {
+    transform: translateX(0);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -149,48 +192,7 @@ body {
 }
 
 .btn {
-  border: 1px solid $p3;
-  text-transform: uppercase;
-  overflow: hidden;
-  display: block;
-  background: none;
-  text-decoration: none;
-  outline: none;
-  cursor: pointer;
-  color: $p3;
-  border-radius: 30px;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-family: "Noto Sans KR", "Arial";
-  position: relative;
-  transition: 0.3s ease-in-out;
-
-  letter-spacing: 0;
-  .arrow {
-    vertical-align: middle;
-  }
-  &:hover {
-    color: white;
-    border:0px solid rgba(255,255,255,0);
-    letter-spacing: 1px;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $p3;
-    transform: translateX(-100%);
-    transition: 0.3s ease-in-out;
-  }
-
-  &:hover:before {
-    transform: translateX(0);
-  }
+ @include btn-style;
 }
 #btn-position{
     position: relative;
@@ -200,4 +202,42 @@ body {
         top:-150px;
         right:70px;
     }
+}
+
+#section2{
+  position: relative;
+  padding:100px 40px 32px 40px;
+  h1{
+    color: $p2;
+    font-size:2.5em;
+    font-family: "Noto Sans KR", "Arial";
+    font-weight: bold;
+  }
+  .circle{
+    width:500px;
+    height:500px;
+    background-color: $p3;
+    opacity:.2;
+    border-radius: 100%;
+    position:absolute;
+    top:-100px;
+    left:-250px;
+    z-index: -1;
+  }
+  p{
+    font-family: "Noto Sans KR", "Arial";
+    color:$t1;
+  }
+  #images{
+    width:100%;
+    margin-top:50px;
+    .img{
+      background-image: url("../img/display.jpg");
+      background-size:cover;
+      margin:auto;
+      width:400px;
+      height:400px;
+    }
+    
+  }
 }
