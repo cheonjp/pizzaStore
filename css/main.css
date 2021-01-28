@@ -36,6 +36,12 @@
   #hero-section {
     display: none;
   }
+  #hero-section .hero {
+    display: none;
+  }
+  #hero-section .image {
+    display: none;
+  }
 }
 
 * {
@@ -106,6 +112,19 @@ body {
   margin: 10px 0 0 30px;
 }
 
+#header #d-menu {
+  margin: auto;
+}
+
+#header #d-menu a {
+  text-decoration: none;
+  font-family: "Noto Sans KR", "Arial";
+  font-size: 1.1em;
+  color: #9e2b02;
+  font-weight: bold;
+  margin: 3vw;
+}
+
 #header .phone-menu {
   height: 0;
   position: absolute;
@@ -159,7 +178,6 @@ body {
   -webkit-box-flex: 100%;
       -ms-flex: 100%;
           flex: 100%;
-  max-width: 1000px;
   text-align: right;
 }
 
@@ -168,9 +186,55 @@ body {
   min-width: 300px;
 }
 
+#d-hero-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  -webkit-box-shadow: 0 -3px 3px lightgray;
+          box-shadow: 0 -3px 3px lightgray;
+}
+
+#d-hero-section .hero {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  z-index: 1;
+  padding: 5%;
+}
+
+#d-hero-section .hero h1 {
+  font-family: "Noto Serif KR", "Arial";
+  color: #975102;
+  font-size: 3em;
+}
+
+#d-hero-section .hero p {
+  font-family: "Noto Sans KR", "Arial";
+  color: #6e6e6e;
+}
+
+#d-hero-section .image {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  text-align: right;
+}
+
+#d-hero-section .image img {
+  width: 100%;
+  min-width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #introduction {
   background-image: url("../img/chef-background.jpg");
-  margin-top: 100px;
   background-size: cover;
   padding: 50px 40px 50px 40px;
 }
@@ -509,7 +573,7 @@ body {
 }
 
 #d-hero-section .hero {
-  background-color: #969696;
+  background-color: #c8c8c8;
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
           flex: 50%;
