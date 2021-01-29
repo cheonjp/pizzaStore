@@ -44,6 +44,15 @@
   }
 }
 
+@media (max-width: 700px) {
+  #d-menu {
+    display: none;
+  }
+  #d-hero-section {
+    display: none;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -123,6 +132,29 @@ body {
   color: #9e2b02;
   font-weight: bold;
   margin: 3vw;
+  position: relative;
+}
+
+#header #d-menu a:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  top: -10px;
+  left: 5px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+#header #d-menu a:hover:after {
+  width: 30px;
+  height: 30px;
+  background-color: #9e2b02;
+  border-radius: 100%;
+  opacity: .4;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 #header .phone-menu {
@@ -187,9 +219,6 @@ body {
 }
 
 #d-hero-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: stretch;
@@ -241,7 +270,7 @@ body {
 
 #introduction .greeding {
   position: relative;
-  max-width: 650px;
+  max-width: 550px;
   background-color: white;
   border-radius: 25px;
   padding: 25px 25px 150px 25px;
@@ -341,7 +370,7 @@ body {
 
 #btn-position {
   position: relative;
-  max-width: 730px;
+  max-width: 600px;
   z-index: 1;
 }
 
@@ -577,5 +606,47 @@ body {
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
           flex: 50%;
+}
+
+#d-hero-section .hero #explain {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color: #30260a;
+  padding: 15px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+#d-hero-section .hero #explain h3 {
+  color: #d9643a;
+}
+
+#d-hero-section .hero #explain p {
+  color: white;
+  font-family: "Noto Sans KR", "Arial";
+}
+
+#d-hero-section .hero #explain #price {
+  border-bottom: 1px solid #a17402;
+  display: inline-block;
+  padding-right: 150px;
+  padding-bottom: 10px;
+}
+
+#d-hero-section .hero #explain .btn {
+  z-index: 1;
+  float: right;
+  color: #a17402;
+  border-color: #a17402;
+}
+
+#d-hero-section .hero #explain .btn:hover {
+  color: white;
+}
+
+#d-hero-section .hero #explain .btn:after {
+  background-color: #a17402;
 }
 /*# sourceMappingURL=main.css.map */

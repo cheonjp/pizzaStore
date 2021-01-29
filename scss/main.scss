@@ -56,6 +56,7 @@ $t2:#2c2c2c;
   }
 }
 
+
 @media only screen and(min-width: 700px){
   .phone-menu{
     display:none;
@@ -87,6 +88,15 @@ $t2:#2c2c2c;
     .image{
       display:none;
     }
+  }
+}
+
+@media(max-width:700px){
+  #d-menu{
+    display:none;
+  }
+  #d-hero-section{
+    display:none;
   }
 }
 
@@ -149,7 +159,24 @@ body {
       color:$p4;
       font-weight: bold;
       margin:3vw;
-      
+      position:relative;
+      &:after{
+        content:"";
+        position:absolute;
+        z-index:-1;
+        transition:.5s ease-in-out;
+        top:-10px;
+        left:5px;
+        transform: scale(0)
+      }
+      &:hover:after{
+        width:30px;
+        height:30px;
+        background-color:$p4;
+        border-radius: 100%;
+        opacity:.4;
+        transform: scale(1)
+      }
     }
   }
   .phone-menu {
@@ -202,7 +229,7 @@ body {
 }
 
 #d-hero-section {
-  display: flex;
+  // display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   position: relative;
@@ -241,7 +268,7 @@ body {
   padding: 50px 40px 50px 40px;
   .greeding {
     position: relative;
-    max-width:650px;
+    max-width:550px;
     background-color: white;
     border-radius: 25px;
     padding: 25px 25px 150px 25px;
@@ -292,7 +319,7 @@ body {
 }
 #btn-position{
     position: relative;
-    max-width:730px;
+    max-width:600px;
     z-index:1;
     div{
         position:absolute;
@@ -479,5 +506,40 @@ p{
   .hero{
     background-color:rgb(200,200,200);
     flex:50%;
+    #explain{
+      position:relative;
+      width:100%;
+      height:300px;
+      background-color:$p6;
+      padding:15px;
+      border-radius: 20px;
+      max-width:600px;
+      margin:auto;
+      h3{
+        color:$p3;
+      }
+      p{
+        color:white;
+        font-family: "Noto Sans KR", "Arial";
+      }
+      #price{
+        border-bottom:1px solid $p5;
+        display:inline-block;
+        padding-right:150px;
+        padding-bottom: 10px;
+      }
+      .btn{
+        z-index:1;
+        float:right;
+        color:$p5;
+        border-color:$p5;
+        &:hover{
+          color:white;
+        }
+        &:after{
+          background-color:$p5;
+        }
+      }
+    }
   }
 }
