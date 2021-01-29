@@ -139,8 +139,8 @@ body {
   content: "";
   position: absolute;
   z-index: -1;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
   top: -10px;
   left: 5px;
   -webkit-transform: scale(0);
@@ -216,50 +216,6 @@ body {
 #hero-section .image img {
   width: 100%;
   min-width: 300px;
-}
-
-#d-hero-section {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  position: relative;
-  -webkit-box-shadow: 0 -3px 3px lightgray;
-          box-shadow: 0 -3px 3px lightgray;
-}
-
-#d-hero-section .hero {
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
-  z-index: 1;
-  padding: 5%;
-}
-
-#d-hero-section .hero h1 {
-  font-family: "Noto Serif KR", "Arial";
-  color: #975102;
-  font-size: 3em;
-}
-
-#d-hero-section .hero p {
-  font-family: "Noto Sans KR", "Arial";
-  color: #6e6e6e;
-}
-
-#d-hero-section .image {
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
-  text-align: right;
-}
-
-#d-hero-section .image img {
-  width: 100%;
-  min-width: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 #introduction {
@@ -594,18 +550,23 @@ body {
 }
 
 #d-hero-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 #d-hero-section .hero {
   background-color: #c8c8c8;
+  padding: 30px;
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
           flex: 50%;
+  padding-top: 100px;
+}
+
+#d-hero-section .hero h1 {
+  font-family: "Noto Sans KR", "Arial";
+  color: #975102;
+  font-size: 2.5em;
 }
 
 #d-hero-section .hero #explain {
@@ -648,5 +609,30 @@ body {
 
 #d-hero-section .hero #explain .btn:after {
   background-color: #a17402;
+}
+
+#d-hero-section .image {
+  position: relative;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+#d-hero-section .image #slide-btn {
+  position: absolute;
+  bottom: 30%;
+}
+
+#d-hero-section .image #slide-btn .slide-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  background-color: #c8c8c8;
+  margin: 15px;
+  cursor: pointer;
+}
+
+#d-hero-section .image img {
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
