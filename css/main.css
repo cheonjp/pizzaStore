@@ -31,7 +31,7 @@
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    max-width: 700px;
+    max-width: 600px;
   }
   #hero-section {
     display: none;
@@ -229,9 +229,14 @@ body {
   padding: 50px 40px 50px 40px;
 }
 
+#introduction .padding {
+  margin: auto;
+  max-width: 1660px;
+}
+
 #introduction .greeding {
   position: relative;
-  max-width: 550px;
+  max-width: 600px;
   background-color: white;
   border-radius: 25px;
   padding: 25px 25px 150px 25px;
@@ -331,14 +336,15 @@ body {
 
 #btn-position {
   position: relative;
-  max-width: 600px;
+  max-width: 1740px;
+  margin: auto;
   z-index: 1;
 }
 
 #btn-position div {
   position: absolute;
   top: -150px;
-  right: 70px;
+  left: 230px;
 }
 
 #section2 {
@@ -348,6 +354,8 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: auto;
+  max-width: 1700px;
   padding: 100px 40px 32px 40px;
 }
 

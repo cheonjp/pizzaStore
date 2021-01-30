@@ -76,7 +76,7 @@ $t2: #2c2c2c;
   #review {
     flex: 50%;
     order: 1;
-    max-width: 700px;
+    max-width: 600px;
   }
   #hero-section {
     display: none;
@@ -233,9 +233,14 @@ body {
   // margin-top: 100px;
   background-size: cover;
   padding: 50px 40px 50px 40px;
+  .padding{
+    margin:auto;
+    max-width:1660px;
+  }
+ 
   .greeding {
     position: relative;
-    max-width: 550px;
+    max-width: 600px;
     background-color: white;
     border-radius: 25px;
     padding: 25px 25px 150px 25px;
@@ -286,12 +291,13 @@ body {
 }
 #btn-position {
   position: relative;
-  max-width: 600px;
+  max-width: 1740px;
+  margin:auto;
   z-index: 1;
   div {
     position: absolute;
     top: -150px;
-    right: 70px;
+    left: 230px;
   }
 }
 
@@ -299,6 +305,8 @@ body {
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  margin:auto;
+  max-width:1700px;
   padding: 100px 40px 32px 40px;
   h1 {
     color: $p2;
