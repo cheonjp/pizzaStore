@@ -62,7 +62,7 @@ body {
   margin: auto;
 }
 
-[class*=col-] {
+[class*="col-"] {
   float: left;
 }
 
@@ -143,8 +143,8 @@ body {
   content: "";
   position: absolute;
   z-index: -1;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   top: -10px;
   left: 5px;
   -webkit-transform: scale(0);
@@ -156,7 +156,7 @@ body {
   height: 30px;
   background-color: #9e2b02;
   border-radius: 100%;
-  opacity: .4;
+  opacity: 0.4;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -243,7 +243,7 @@ body {
   height: 400px;
   background-color: #d9643a;
   border-radius: 100%;
-  opacity: .2;
+  opacity: 0.2;
   position: absolute;
   top: -150px;
   right: -100px;
@@ -364,7 +364,7 @@ body {
   width: 500px;
   height: 500px;
   background-color: #d9643a;
-  opacity: .2;
+  opacity: 0.2;
   border-radius: 100%;
   position: absolute;
   top: -100px;
@@ -499,8 +499,8 @@ body {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .goback:hover {

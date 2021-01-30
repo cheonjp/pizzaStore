@@ -4,8 +4,7 @@ $p3: #d9643a;
 $p4: #9e2b02;
 $p5: #a17402;
 $p6: #30260a;
-$t2:#2c2c2c;
-
+$t2: #2c2c2c;
 
 @mixin h1 {
   color: $p2;
@@ -13,7 +12,7 @@ $t2:#2c2c2c;
   font-weight: bold;
 }
 
-@mixin btn-style{
+@mixin btn-style {
   border: 1px solid $p3;
   overflow: hidden;
   display: block;
@@ -56,47 +55,46 @@ $t2:#2c2c2c;
   }
 }
 
-
-@media only screen and(min-width: 700px){
-  .phone-menu{
-    display:none;
+@media only screen and(min-width: 700px) {
+  .phone-menu {
+    display: none;
   }
-  .image{
-    order:2;
+  .image {
+    order: 2;
   }
-  .hero{
-    order:1;
+  .hero {
+    order: 1;
   }
-  #images{
-    flex:50%;
-    order:2;
-    img{
-      width:600px;
-      display:none;
+  #images {
+    flex: 50%;
+    order: 2;
+    img {
+      width: 600px;
+      display: none;
     }
   }
-  #review{
-    flex:50%;
-    order:1;
-    max-width:700px;
+  #review {
+    flex: 50%;
+    order: 1;
+    max-width: 700px;
   }
-  #hero-section{
-    display:none;
-    .hero{
-      display:none;
+  #hero-section {
+    display: none;
+    .hero {
+      display: none;
     }
-    .image{
-      display:none;
+    .image {
+      display: none;
     }
   }
 }
 
-@media(max-width:700px){
-  #d-menu{
-    display:none;
+@media (max-width: 700px) {
+  #d-menu {
+    display: none;
   }
-  #d-hero-section{
-    display:none;
+  #d-hero-section {
+    display: none;
   }
 }
 
@@ -107,8 +105,8 @@ body {
   margin: auto;
 }
 
-[class*=col-]{
-  float:left;
+[class*="col-"] {
+  float: left;
 }
 .col-1 {
   width: 8.33%;
@@ -153,32 +151,32 @@ body {
   a {
     margin: 10px 0 0 30px;
   }
-  #d-menu{
-    margin:auto;
-    a{
+  #d-menu {
+    margin: auto;
+    a {
       text-decoration: none;
       font-family: "Noto Sans KR", "Arial";
-      font-size:1.1em;
-      color:$p4;
+      font-size: 1.1em;
+      color: $p4;
       font-weight: bold;
-      margin:3vw;
-      position:relative;
-      &:after{
-        content:"";
-        position:absolute;
-        z-index:-1;
-        transition:.3s ease-in-out;
-        top:-10px;
-        left:5px;
-        transform: scale(0)
+      margin: 3vw;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        transition: 0.3s ease-in-out;
+        top: -10px;
+        left: 5px;
+        transform: scale(0);
       }
-      &:hover:after{
-        width:30px;
-        height:30px;
-        background-color:$p4;
+      &:hover:after {
+        width: 30px;
+        height: 30px;
+        background-color: $p4;
         border-radius: 100%;
-        opacity:.4;
-        transform: scale(1)
+        opacity: 0.4;
+        transform: scale(1);
       }
     }
   }
@@ -230,27 +228,27 @@ body {
 }
 
 #introduction {
-  clear:both;
+  clear: both;
   background-image: url("../img/chef-background.jpg");
   // margin-top: 100px;
   background-size: cover;
   padding: 50px 40px 50px 40px;
   .greeding {
     position: relative;
-    max-width:550px;
+    max-width: 550px;
     background-color: white;
     border-radius: 25px;
     padding: 25px 25px 150px 25px;
-    overflow:hidden;
-    .circle{
-      width:400px;
-      height:400px;
-      background-color:$p3;
+    overflow: hidden;
+    .circle {
+      width: 400px;
+      height: 400px;
+      background-color: $p3;
       border-radius: 100%;
-      opacity: .2;
-      position:absolute;
-      top:-150px;
-      right:-100px;
+      opacity: 0.2;
+      position: absolute;
+      top: -150px;
+      right: -100px;
     }
     h2 {
       text-align: center;
@@ -284,264 +282,269 @@ body {
 }
 
 .btn {
- @include btn-style;
+  @include btn-style;
 }
-#btn-position{
-    position: relative;
-    max-width:600px;
-    z-index:1;
-    div{
-        position:absolute;
-        top:-150px;
-        right:70px;
-    }
+#btn-position {
+  position: relative;
+  max-width: 600px;
+  z-index: 1;
+  div {
+    position: absolute;
+    top: -150px;
+    right: 70px;
+  }
 }
 
-#section2{
+#section2 {
   position: relative;
-  display:flex;
-  flex-wrap:wrap;
-  padding:100px 40px 32px 40px;
-  h1{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 40px 32px 40px;
+  h1 {
     color: $p2;
-    font-size:2.5em;
+    font-size: 2.5em;
     font-family: "Noto Sans KR", "Arial";
     font-weight: bold;
-    display:block;
-    width:100%;
+    display: block;
+    width: 100%;
   }
-  .circle{
-    width:500px;
-    height:500px;
+  .circle {
+    width: 500px;
+    height: 500px;
     background-color: $p3;
-    opacity:.2;
+    opacity: 0.2;
     border-radius: 100%;
-    position:absolute;
-    top:-100px;
-    left:-250px;
+    position: absolute;
+    top: -100px;
+    left: -250px;
     z-index: -1;
   }
-  p{
+  p {
     font-family: "Noto Sans KR", "Arial";
-    color:$t1;
+    color: $t1;
   }
-  #images{
-    width:100%;
-    margin-top:50px;
-    img{
-      min-width:400px;
-      width:100%;
-      max-width:600px;
-      display:block;
-      margin:auto;
+  #images {
+    width: 100%;
+    margin-top: 50px;
+    img {
+      min-width: 400px;
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: auto;
     }
-    
   }
-  #images{
-    width:100%;
+  #images {
+    width: 100%;
   }
-  #review{
+  #review {
     border: 1px solid $p2;
-    width:100%;
+    width: 100%;
     border-radius: 25px;
-    padding:15px;
-    #container{
-      background-color: rgba(161,116,2,0.3);
-      width:100%;
-      height:690px;
+    padding: 15px;
+    #container {
+      background-color: rgba(161, 116, 2, 0.3);
+      width: 100%;
+      height: 690px;
       border-radius: 25px;
-      padding:20px;
-      overflow:hidden;
-      .face{
-        width:80px;
-        height:80px;
-        border-radius:100%;
-        display:block;
+      padding: 20px;
+      overflow: hidden;
+      .face {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        display: block;
         margin: 20px auto 10px auto;
       }
-      .stars{
+      .stars {
         text-align: center;
       }
-      .star{
-        color:$p3;
+      .star {
+        color: $p3;
       }
-      .name{
-        display:block;
+      .name {
+        display: block;
         text-align: center;
-        font-family:"Noto Sans KR", "Arial";
+        font-family: "Noto Sans KR", "Arial";
         font-weight: bold;
-        
       }
-      .statement{
-        color:$t2;
-        display:block;
-        margin:auto;
+      .statement {
+        color: $t2;
+        display: block;
+        margin: auto;
         text-align: center;
-        width:100%;
-        max-width:550px;
+        width: 100%;
+        max-width: 550px;
       }
-      hr{
-        height:1px;
-        background-color:white;
-        border:none;
+      hr {
+        height: 1px;
+        background-color: white;
+        border: none;
       }
     }
   }
 }
 
-#footer{
-  background-color:#c8c8c8;
-  padding:40px;
-  img{
-    display:block;
-    margin:auto;
-    cursor:pointer;
+#footer {
+  background-color: #c8c8c8;
+  padding: 40px;
+  img {
+    display: block;
+    margin: auto;
+    cursor: pointer;
   }
-  #icon-box{
-  text-align: center;
-  }
-  .facebook{
-    width:40px;
-    path{fill:$t2;}
-    
-  }
-  .instagram{
-    width:40px;
-    margin-left:100px;
-    margin-right:100px;
-    path{fill:$t2;}
-  }
-  .twitter{
-    width:40px;
-    path{fill:$t2;}
-  }
-  p{
+  #icon-box {
     text-align: center;
-    font-size:1.1em;
   }
-}
-.goback{
-  cursor:pointer;
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  transition: all .3s ease-in-out;
-}
-.goback:hover{
-transform: scale(1.15);
-}
-
-#menu-box{
-  height:100%;
-  width:80%;
-  background-color:$p6;
-  position:fixed;
-  z-index:10;
-  right:100%;
-  .menu{
-    color:white;
-    font-family: "Noto Sans KR", "Arial";
-    font-size:1.1em;
-    margin-left:40px;
-    margin-right:40px;
-    padding:10px;
-    border-bottom: 1px solid rgb(80,80,80);
-    span{margin-right:15px;}
-  }
-  #menu-div{
-    background-image: linear-gradient(right, $p4, $p5);
-    width:100%;
-    height:120px;
-  }
-h2{
-  color:white;
-  text-align: center;
-  padding-top:30px;
-  line-height:30px;
-  font-size:1.4em;
-  margin:0;
-}
-p{
-  margin-top:0;
-  color:white;
-  text-align: center;
-  font-family: "Noto Sans KR", "Arial";
-}
-}
-
-#d-hero-section{
-  flex-wrap:wrap;
-  .hero{
-    box-shadow:0 -2px 2px gray;
-    background-color:rgb(200,200,200);
-    padding:30px;
-    flex:50%;
-    padding-top:100px;
-    h1{
-      font-family: "Noto Sans KR", "Arial";
-      color:$p2;
-      font-size:2.5em;
+  .facebook {
+    width: 40px;
+    path {
+      fill: $t2;
     }
-    #explain{
-      position:relative;
-      width:100%;
-      height:300px;
-      background-color:$p6;
-      padding:15px;
+  }
+  .instagram {
+    width: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+    path {
+      fill: $t2;
+    }
+  }
+  .twitter {
+    width: 40px;
+    path {
+      fill: $t2;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 1.1em;
+  }
+}
+.goback {
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.goback:hover {
+  transform: scale(1.15);
+}
+
+#menu-box {
+  height: 100%;
+  width: 80%;
+  background-color: $p6;
+  position: fixed;
+  z-index: 10;
+  right: 100%;
+  .menu {
+    color: white;
+    font-family: "Noto Sans KR", "Arial";
+    font-size: 1.1em;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(80, 80, 80);
+    span {
+      margin-right: 15px;
+    }
+  }
+  #menu-div {
+    background-image: linear-gradient(right, $p4, $p5);
+    width: 100%;
+    height: 120px;
+  }
+  h2 {
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    line-height: 30px;
+    font-size: 1.4em;
+    margin: 0;
+  }
+  p {
+    margin-top: 0;
+    color: white;
+    text-align: center;
+    font-family: "Noto Sans KR", "Arial";
+  }
+}
+
+#d-hero-section {
+  flex-wrap: wrap;
+  .hero {
+    box-shadow: 0 -2px 2px gray;
+    background-color: rgb(200, 200, 200);
+    padding: 30px;
+    flex: 50%;
+    padding-top: 100px;
+    h1 {
+      font-family: "Noto Sans KR", "Arial";
+      color: $p2;
+      font-size: 2.5em;
+    }
+    #explain {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-color: $p6;
+      padding: 15px;
       border-radius: 20px;
-      max-width:600px;
-      margin:auto;
-      h3{
-        color:$p3;
+      max-width: 600px;
+      margin: auto;
+      h3 {
+        color: $p3;
       }
-      p{
-        color:white;
+      p {
+        color: white;
         font-family: "Noto Sans KR", "Arial";
       }
-      #price{
-        border-bottom:1px solid $p5;
-        display:inline-block;
-        padding-right:150px;
+      #price {
+        border-bottom: 1px solid $p5;
+        display: inline-block;
+        padding-right: 150px;
         padding-bottom: 10px;
       }
-      .btn{
-        z-index:1;
-        float:right;
-        color:$p5;
-        border-color:$p5;
-        &:hover{
-          color:white;
+      .btn {
+        z-index: 1;
+        float: right;
+        color: $p5;
+        border-color: $p5;
+        &:hover {
+          color: white;
         }
-        &:after{
-          background-color:$p5;
+        &:after {
+          background-color: $p5;
         }
       }
     }
   }
-  .image{
-    box-shadow:0 -2px 2px gray;
+  .image {
+    box-shadow: 0 -2px 2px gray;
     position: relative;
-    padding-left:50px;
-    flex:50%;
-    #slide-btn{
+    padding-left: 50px;
+    flex: 50%;
+    #slide-btn {
       position: absolute;
-      bottom:20%;
-      left:10px;
-      .slide-circle{
-        width:15px;
-        height:15px;
+      bottom: 20%;
+      left: 10px;
+      .slide-circle {
+        width: 15px;
+        height: 15px;
         border-radius: 100%;
-        background-color:rgb(200,200,200);
-        margin:15px;
-        cursor:pointer;
+        background-color: rgb(200, 200, 200);
+        margin: 15px;
+        cursor: pointer;
       }
     }
-    img{
-      width:100%;
-      max-width:650px;
-      float:right;
+    img {
+      width: 100%;
+      max-width: 650px;
+      float: right;
       vertical-align: middle;
-      display:inline-block;
+      display: inline-block;
     }
   }
 }
