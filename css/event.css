@@ -121,6 +121,8 @@ body {
   background-image: url("../img/event.jpg");
   background-size: cover;
   width: 100%;
+  height: 46vw;
+  min-height: 500px;
   padding: 100px 40px 40px 40px;
 }
 
@@ -136,6 +138,7 @@ body {
   max-width: 1000px;
   margin: auto;
   color: #2c2c2c;
+  font-family: "Noto Sans KR", "Arial";
 }
 
 #intro h2 {
@@ -149,13 +152,83 @@ body {
   margin-top: 50px;
 }
 
+#intro .christmas {
+  margin-top: 400px;
+}
+
+#intro .christmas h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Noto Serif KR", "Arial";
+  color: #975102;
+  text-align: center;
+}
+
+#intro .christmas p {
+  font-family: "Noto Sans KR", "Arial";
+  color: #6e6e6e;
+}
+
+#intro .christmas p b {
+  color: #d9643a;
+}
+
+#intro .christmas .btn {
+  border: 1px solid #d9643a;
+  overflow: hidden;
+  display: block;
+  background: none;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: #d9643a;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Noto Sans KR", "Arial";
+  position: relative;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  margin-top: 40px;
+  float: right;
+}
+
+#intro .christmas .btn .arrow {
+  vertical-align: middle;
+}
+
+#intro .christmas .btn:hover {
+  color: white;
+  letter-spacing: 1px;
+}
+
+#intro .christmas .btn::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d9643a;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#intro .christmas .btn:hover:after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 #currentevent {
   position: relative;
 }
 
 #currentevent .event-circle {
   border-radius: 100%;
-  border: 1px solid #a17402;
+  border: 2px solid #a17402;
   margin: 30px;
 }
 
@@ -173,11 +246,12 @@ body {
 }
 
 #currentevent .event-circle:nth-child(1) div {
-  width: 280px;
-  height: 280px;
+  width: 290px;
+  height: 290px;
   background: red;
   margin: auto;
   border-radius: 100%;
+  border: 1px solid #a17402;
   vertical-align: middle;
   display: inline-block;
   background-image: url("../img/christmas-2.jpg");
@@ -199,10 +273,11 @@ body {
 }
 
 #currentevent .event-circle:nth-child(2) div {
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   background-image: url("../img/christmas-3.jpg");
   background-size: cover;
+  border: 1px solid #a17402;
   border-radius: 100%;
   margin: auto;
 }
@@ -222,10 +297,11 @@ body {
 }
 
 #currentevent .event-circle:nth-child(3) div {
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   background: red;
   border-radius: 100%;
+  border: 1px solid #a17402;
   margin: auto;
   background-image: url("../img/christmas-1.jpg");
   background-size: cover;

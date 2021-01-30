@@ -5,6 +5,7 @@ $p4: #9e2b02;
 $p5: #a17402;
 $p6: #30260a;
 $t2: #2c2c2c;
+$font: "Noto Sans KR", "Arial";
 
 @mixin h1 {
   color: $p2;
@@ -14,6 +15,11 @@ $t2: #2c2c2c;
 }
 @mixin h2{
     font-size:2em;
+    font-weight: bold;
+    font-family: "Noto Serif KR", "Arial";
+}
+@mixin h3{
+    font-size:1.5em;
     font-weight: bold;
     font-family: "Noto Serif KR", "Arial";
 }
@@ -161,6 +167,8 @@ body{
     background-image: url("../img/event.jpg");
     background-size:cover;
     width:100%;
+    height:46vw;
+    min-height:500px;
     padding: 100px 40px 40px 40px;
     h1{
         @include h1;
@@ -170,6 +178,7 @@ body{
         max-width:1000px;
         margin:auto;
         color:$t2;
+        font-family: $font;
     }
     h2{
         @include h2;
@@ -179,12 +188,32 @@ body{
         width:100%;
         margin-top:50px;
     }
+    .christmas{
+        margin-top:400px;
+        h3{
+            @include h3;
+            color:$p2;
+            text-align: center;
+        }
+        p{
+            font-family: $font;
+            color:$t1;
+            b{
+                color:$p3;
+            }
+        }
+        .btn{
+            @include btn-style;
+            margin-top:40px;
+            float:right;
+        }
+    }
 }
 #currentevent{
     position:relative;
     .event-circle{
         border-radius: 100%;
-        border: 1px solid $p5;
+        border: 2px solid $p5;
         margin:30px;
     }
     .event-circle:nth-child(1){
@@ -195,11 +224,12 @@ body{
         display:flex;
         align-items:center;
         div{
-            width:280px;
-            height:280px;
+            width:290px;
+            height:290px;
             background:red;
             margin:auto;
             border-radius: 100%;
+            border:1px solid $p5;
             vertical-align: middle;
             display:inline-block;
             background-image:url("../img/christmas-2.jpg");
@@ -216,10 +246,11 @@ body{
         display:flex;
         align-items:center;
         div{
-            width:130px;
-            height:130px;
+            width:140px;
+            height:140px;
             background-image:url("../img/christmas-3.jpg");
             background-size:cover;
+            border:1px solid $p5;
             border-radius: 100%;
             margin:auto;
         }
@@ -233,10 +264,11 @@ body{
         display:flex;
         align-items: center;
         div{
-            width:130px;
-            height:130px;
+            width:140px;
+            height:140px;
             background:red;
             border-radius: 100%;
+            border:1px solid $p5;
             margin:auto;
             background-image:url("../img/christmas-1.jpg");
             background-size:cover;
