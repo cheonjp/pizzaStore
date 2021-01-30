@@ -62,6 +62,10 @@ body {
   margin: auto;
 }
 
+[class*=col-] {
+  float: left;
+}
+
 .col-1 {
   width: 8.33%;
 }
@@ -219,6 +223,7 @@ body {
 }
 
 #introduction {
+  clear: both;
   background-image: url("../img/chef-background.jpg");
   background-size: cover;
   padding: 50px 40px 50px 40px;
@@ -555,6 +560,8 @@ body {
 }
 
 #d-hero-section .hero {
+  -webkit-box-shadow: 0 -2px 2px gray;
+          box-shadow: 0 -2px 2px gray;
   background-color: #c8c8c8;
   padding: 30px;
   -webkit-box-flex: 50%;
@@ -612,7 +619,10 @@ body {
 }
 
 #d-hero-section .image {
+  -webkit-box-shadow: 0 -2px 2px gray;
+          box-shadow: 0 -2px 2px gray;
   position: relative;
+  padding-left: 50px;
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
           flex: 50%;
@@ -620,12 +630,13 @@ body {
 
 #d-hero-section .image #slide-btn {
   position: absolute;
-  bottom: 30%;
+  bottom: 20%;
+  left: 10px;
 }
 
 #d-hero-section .image #slide-btn .slide-circle {
-  width: 22px;
-  height: 22px;
+  width: 15px;
+  height: 15px;
   border-radius: 100%;
   background-color: #c8c8c8;
   margin: 15px;
@@ -634,5 +645,9 @@ body {
 
 #d-hero-section .image img {
   width: 100%;
+  max-width: 650px;
+  float: right;
+  vertical-align: middle;
+  display: inline-block;
 }
 /*# sourceMappingURL=main.css.map */

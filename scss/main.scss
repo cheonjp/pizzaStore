@@ -107,6 +107,9 @@ body {
   margin: auto;
 }
 
+[class*=col-]{
+  float:left;
+}
 .col-1 {
   width: 8.33%;
 }
@@ -219,8 +222,6 @@ body {
   .image {
     flex: 100%;
     text-align: right;
-    
-
     img {
       width: 100%;
       min-width: 300px;
@@ -229,6 +230,7 @@ body {
 }
 
 #introduction {
+  clear:both;
   background-image: url("../img/chef-background.jpg");
   // margin-top: 100px;
   background-size: cover;
@@ -468,9 +470,9 @@ p{
 }
 
 #d-hero-section{
-  // display:flex;
   flex-wrap:wrap;
   .hero{
+    box-shadow:0 -2px 2px gray;
     background-color:rgb(200,200,200);
     padding:30px;
     flex:50%;
@@ -517,14 +519,17 @@ p{
     }
   }
   .image{
+    box-shadow:0 -2px 2px gray;
     position: relative;
+    padding-left:50px;
     flex:50%;
     #slide-btn{
       position: absolute;
-      bottom:30%;
+      bottom:20%;
+      left:10px;
       .slide-circle{
-        width:22px;
-        height:22px;
+        width:15px;
+        height:15px;
         border-radius: 100%;
         background-color:rgb(200,200,200);
         margin:15px;
@@ -533,6 +538,10 @@ p{
     }
     img{
       width:100%;
+      max-width:650px;
+      float:right;
+      vertical-align: middle;
+      display:inline-block;
     }
   }
 }
