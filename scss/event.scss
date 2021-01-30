@@ -8,8 +8,14 @@ $t2: #2c2c2c;
 
 @mixin h1 {
   color: $p2;
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: bold;
+  font-family: "Noto Serif KR", "Arial";
+}
+@mixin h2{
+    font-size:2em;
+    font-weight: bold;
+    font-family: "Noto Serif KR", "Arial";
 }
 
 @mixin btn-style {
@@ -56,6 +62,10 @@ $t2: #2c2c2c;
 }
 * {
   box-sizing: border-box;
+}
+body{
+    margin:0;
+    overflow-x: hidden;
 }
 #header {
   display: flex;
@@ -146,4 +156,90 @@ $t2: #2c2c2c;
     text-align: center;
     font-family: "Noto Sans KR", "Arial";
   }
+}
+#intro{
+    background-image: url("../img/event.jpg");
+    background-size:cover;
+    width:100%;
+    padding: 100px 40px 40px 40px;
+    h1{
+        @include h1;
+        text-align: center;
+    }
+    p{
+        max-width:1000px;
+        margin:auto;
+        color:$t2;
+    }
+    h2{
+        @include h2;
+        text-align: center;
+        color:$p2;
+        display:block;
+        width:100%;
+        margin-top:50px;
+    }
+}
+#currentevent{
+    position:relative;
+    .event-circle{
+        border-radius: 100%;
+        border: 1px solid $p5;
+        margin:30px;
+    }
+    .event-circle:nth-child(1){
+        width:300px;
+        height:300px;
+        position:absolute;
+        left:-150px;
+        display:flex;
+        align-items:center;
+        div{
+            width:280px;
+            height:280px;
+            background:red;
+            margin:auto;
+            border-radius: 100%;
+            vertical-align: middle;
+            display:inline-block;
+            background-image:url("../img/christmas-2.jpg");
+            background-size:cover;
+            
+        }
+    }
+    .event-circle:nth-child(2){
+        width:150px;
+        height:150px;
+        position:absolute;
+        left:40%;
+        margin-top:180px;
+        display:flex;
+        align-items:center;
+        div{
+            width:130px;
+            height:130px;
+            background-image:url("../img/christmas-3.jpg");
+            background-size:cover;
+            border-radius: 100%;
+            margin:auto;
+        }
+    }
+    .event-circle:nth-child(3){
+        width:150px;
+        height:150px;
+        position: absolute;
+        right:-130px;
+        margin-top:180px;
+        display:flex;
+        align-items: center;
+        div{
+            width:130px;
+            height:130px;
+            background:red;
+            border-radius: 100%;
+            margin:auto;
+            background-image:url("../img/christmas-1.jpg");
+            background-size:cover;
+        }
+    }
 }

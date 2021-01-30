@@ -3,6 +3,11 @@
           box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
 #header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,5 +115,119 @@
   color: white;
   text-align: center;
   font-family: "Noto Sans KR", "Arial";
+}
+
+#intro {
+  background-image: url("../img/event.jpg");
+  background-size: cover;
+  width: 100%;
+  padding: 100px 40px 40px 40px;
+}
+
+#intro h1 {
+  color: #975102;
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: "Noto Serif KR", "Arial";
+  text-align: center;
+}
+
+#intro p {
+  max-width: 1000px;
+  margin: auto;
+  color: #2c2c2c;
+}
+
+#intro h2 {
+  font-size: 2em;
+  font-weight: bold;
+  font-family: "Noto Serif KR", "Arial";
+  text-align: center;
+  color: #975102;
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+}
+
+#currentevent {
+  position: relative;
+}
+
+#currentevent .event-circle {
+  border-radius: 100%;
+  border: 1px solid #a17402;
+  margin: 30px;
+}
+
+#currentevent .event-circle:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: -150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#currentevent .event-circle:nth-child(1) div {
+  width: 280px;
+  height: 280px;
+  background: red;
+  margin: auto;
+  border-radius: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url("../img/christmas-2.jpg");
+  background-size: cover;
+}
+
+#currentevent .event-circle:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 40%;
+  margin-top: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#currentevent .event-circle:nth-child(2) div {
+  width: 130px;
+  height: 130px;
+  background-image: url("../img/christmas-3.jpg");
+  background-size: cover;
+  border-radius: 100%;
+  margin: auto;
+}
+
+#currentevent .event-circle:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: -130px;
+  margin-top: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#currentevent .event-circle:nth-child(3) div {
+  width: 130px;
+  height: 130px;
+  background: red;
+  border-radius: 100%;
+  margin: auto;
+  background-image: url("../img/christmas-1.jpg");
+  background-size: cover;
 }
 /*# sourceMappingURL=event.css.map */
