@@ -152,11 +152,12 @@ body {
   margin-top: 50px;
 }
 
-#intro .christmas {
-  margin-top: 400px;
+.christmas {
+  margin-bottom: 150px;
+  clear: both;
 }
 
-#intro .christmas h3 {
+.christmas h3 {
   font-size: 1.5em;
   font-weight: bold;
   font-family: "Noto Serif KR", "Arial";
@@ -164,16 +165,18 @@ body {
   text-align: center;
 }
 
-#intro .christmas p {
+.christmas p {
   font-family: "Noto Sans KR", "Arial";
   color: #6e6e6e;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
-#intro .christmas p b {
+.christmas p b {
   color: #d9643a;
 }
 
-#intro .christmas .btn {
+.christmas .btn {
   border: 1px solid #d9643a;
   overflow: hidden;
   display: block;
@@ -190,19 +193,20 @@ body {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   margin-top: 40px;
+  margin-right: 40px;
   float: right;
 }
 
-#intro .christmas .btn .arrow {
+.christmas .btn .arrow {
   vertical-align: middle;
 }
 
-#intro .christmas .btn:hover {
+.christmas .btn:hover {
   color: white;
   letter-spacing: 1px;
 }
 
-#intro .christmas .btn::after {
+.christmas .btn::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -217,26 +221,24 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-#intro .christmas .btn:hover:after {
+.christmas .btn:hover:after {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-}
-
-#currentevent {
-  position: relative;
 }
 
 #currentevent .event-circle {
   border-radius: 100%;
   border: 2px solid #a17402;
   margin: 30px;
+  display: inline;
+  float: left;
 }
 
 #currentevent .event-circle:nth-child(1) {
   width: 300px;
   height: 300px;
-  position: absolute;
-  left: -150px;
+  display: inline-block;
+  margin-left: -150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,7 +250,6 @@ body {
 #currentevent .event-circle:nth-child(1) div {
   width: 290px;
   height: 290px;
-  background: red;
   margin: auto;
   border-radius: 100%;
   border: 1px solid #a17402;
@@ -261,15 +262,14 @@ body {
 #currentevent .event-circle:nth-child(2) {
   width: 150px;
   height: 150px;
-  position: absolute;
-  left: 40%;
-  margin-top: 180px;
+  display: inline;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 185px 5% 50px 5%;
 }
 
 #currentevent .event-circle:nth-child(2) div {
@@ -285,9 +285,8 @@ body {
 #currentevent .event-circle:nth-child(3) {
   width: 150px;
   height: 150px;
-  position: absolute;
-  right: -130px;
-  margin-top: 180px;
+  margin-top: 185px;
+  margin-right: -200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -299,11 +298,127 @@ body {
 #currentevent .event-circle:nth-child(3) div {
   width: 140px;
   height: 140px;
-  background: red;
   border-radius: 100%;
   border: 1px solid #a17402;
   margin: auto;
   background-image: url("../img/christmas-1.jpg");
   background-size: cover;
+}
+
+#comingEvent {
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#comingEvent h1 {
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #975102;
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: "Noto Serif KR", "Arial";
+}
+
+#comingEvent .event-explain {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+
+#comingEvent .event-circle {
+  width: 420px;
+  height: 420px;
+  border: 2px solid #a17402;
+  border-radius: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+#comingEvent .event-circle .circle-img {
+  width: 410px;
+  height: 410px;
+  background-color: green;
+  border-radius: 100%;
+  margin: auto;
+}
+
+#comingEvent h3 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Noto Serif KR", "Arial";
+  color: #975102;
+  margin-bottom: 10px;
+}
+
+#comingEvent .event-title {
+  text-align: center;
+  font-family: "Noto Sans KR", "Arial";
+  font-weight: bold;
+  font: size 1.1em;
+  margin-top: 0;
+  color: #2c2c2c;
+}
+
+#comingEvent p {
+  color: #6e6e6e;
+  font-family: "Noto Sans KR", "Arial";
+}
+
+#comingEvent .decoration-circle {
+  background-color: #9e2b02;
+  border-radius: 100%;
+  position: absolute;
+}
+
+#comingEvent .decoration-circle:nth-child(1) {
+  width: 30px;
+  height: 30px;
+  opacity: .2;
+  top: -60px;
+  right: 200px;
+}
+
+#comingEvent .decoration-circle:nth-child(2) {
+  width: 40px;
+  height: 40px;
+  opacity: .3;
+  top: -8px;
+  right: 35px;
+}
+
+#comingEvent .decoration-circle:nth-child(3) {
+  width: 55px;
+  height: 55px;
+  opacity: .4;
+  top: 153px;
+  right: -38px;
+}
+
+#comingEvent .decoration-circle:nth-child(4) {
+  width: 70px;
+  height: 70px;
+  opacity: .5;
+  top: 324px;
+  right: 16px;
+}
+
+#comingEvent .decoration-circle:nth-child(5) {
+  width: 85px;
+  height: 85px;
+  opacity: .6;
+  top: 370px;
+  right: 181px;
 }
 /*# sourceMappingURL=event.css.map */

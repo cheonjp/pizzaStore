@@ -13,15 +13,15 @@ $font: "Noto Sans KR", "Arial";
   font-weight: bold;
   font-family: "Noto Serif KR", "Arial";
 }
-@mixin h2{
-    font-size:2em;
-    font-weight: bold;
-    font-family: "Noto Serif KR", "Arial";
+@mixin h2 {
+  font-size: 2em;
+  font-weight: bold;
+  font-family: "Noto Serif KR", "Arial";
 }
-@mixin h3{
-    font-size:1.5em;
-    font-weight: bold;
-    font-family: "Noto Serif KR", "Arial";
+@mixin h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Noto Serif KR", "Arial";
 }
 
 @mixin btn-style {
@@ -69,9 +69,9 @@ $font: "Noto Sans KR", "Arial";
 * {
   box-sizing: border-box;
 }
-body{
-    margin:0;
-    overflow-x: hidden;
+body {
+  margin: 0;
+  overflow-x: hidden;
 }
 #header {
   display: flex;
@@ -163,115 +163,211 @@ body{
     font-family: "Noto Sans KR", "Arial";
   }
 }
-#intro{
-    background-image: url("../img/event.jpg");
-    background-size:cover;
-    width:100%;
-    height:46vw;
-    min-height:500px;
-    padding: 100px 40px 40px 40px;
-    h1{
-        @include h1;
-        text-align: center;
-    }
-    p{
-        max-width:1000px;
-        margin:auto;
-        color:$t2;
-        font-family: $font;
-    }
-    h2{
-        @include h2;
-        text-align: center;
-        color:$p2;
-        display:block;
-        width:100%;
-        margin-top:50px;
-    }
-    .christmas{
-        margin-top:400px;
-        h3{
-            @include h3;
-            color:$p2;
-            text-align: center;
-        }
-        p{
-            font-family: $font;
-            color:$t1;
-            b{
-                color:$p3;
-            }
-        }
-        .btn{
-            @include btn-style;
-            margin-top:40px;
-            float:right;
-        }
-    }
+#intro {
+  background-image: url("../img/event.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 46vw;
+  min-height: 500px;
+  padding: 100px 40px 40px 40px;
+  h1 {
+    @include h1;
+    text-align: center;
+  }
+  p {
+    max-width: 1000px;
+    margin: auto;
+    color: $t2;
+    font-family: $font;
+  }
+  h2 {
+    @include h2;
+    text-align: center;
+    color: $p2;
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+  }
 }
-#currentevent{
-    position:relative;
-    .event-circle{
-        border-radius: 100%;
-        border: 2px solid $p5;
-        margin:30px;
+.christmas {
+  margin-bottom: 150px;
+  clear: both;
+  h3 {
+    @include h3;
+    color: $p2;
+    text-align: center;
+  }
+  p {
+    font-family: $font;
+    color: $t1;
+    margin-right: 40px;
+    margin-left: 40px;
+    b {
+      color: $p3;
     }
-    .event-circle:nth-child(1){
-        width:300px;
-        height:300px;
-        position:absolute;
-        left:-150px;
-        display:flex;
-        align-items:center;
-        div{
-            width:290px;
-            height:290px;
-            background:red;
-            margin:auto;
-            border-radius: 100%;
-            border:1px solid $p5;
-            vertical-align: middle;
-            display:inline-block;
-            background-image:url("../img/christmas-2.jpg");
-            background-size:cover;
-            
-        }
+  }
+  .btn {
+    @include btn-style;
+    margin-top: 40px;
+    margin-right: 40px;
+    float: right;
+  }
+}
+#currentevent {
+  .event-circle {
+    border-radius: 100%;
+    border: 2px solid $p5;
+    margin: 30px;
+    display: inline;
+    float: left;
+  }
+  .event-circle:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    // position:absolute;
+    display: inline-block;
+    margin-left: -150px;
+    display: flex;
+    align-items: center;
+    div {
+      width: 290px;
+      height: 290px;
+      margin: auto;
+      border-radius: 100%;
+      border: 1px solid $p5;
+      vertical-align: middle;
+      display: inline-block;
+      background-image: url("../img/christmas-2.jpg");
+      background-size: cover;
     }
-    .event-circle:nth-child(2){
-        width:150px;
-        height:150px;
-        position:absolute;
-        left:40%;
-        margin-top:180px;
-        display:flex;
-        align-items:center;
-        div{
-            width:140px;
-            height:140px;
-            background-image:url("../img/christmas-3.jpg");
-            background-size:cover;
-            border:1px solid $p5;
-            border-radius: 100%;
-            margin:auto;
-        }
+  }
+  .event-circle:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    // position:absolute;
+    // left:40%;
+    // margin-top:180px;
+    display: inline;
+    display: flex;
+    align-items: center;
+    margin: 185px 5% 50px 5%;
+    div {
+      width: 140px;
+      height: 140px;
+      background-image: url("../img/christmas-3.jpg");
+      background-size: cover;
+      border: 1px solid $p5;
+      border-radius: 100%;
+      margin: auto;
     }
-    .event-circle:nth-child(3){
-        width:150px;
-        height:150px;
-        position: absolute;
-        right:-130px;
-        margin-top:180px;
-        display:flex;
-        align-items: center;
-        div{
-            width:140px;
-            height:140px;
-            background:red;
-            border-radius: 100%;
-            border:1px solid $p5;
-            margin:auto;
-            background-image:url("../img/christmas-1.jpg");
-            background-size:cover;
-        }
+  }
+  .event-circle:nth-child(3) {
+    width: 150px;
+    height: 150px;
+    // position: absolute;
+    // right:-130px;
+    margin-top: 185px;
+    margin-right: -200px;
+    display: flex;
+    align-items: center;
+    div {
+      width: 140px;
+      height: 140px;
+      border-radius: 100%;
+      border: 1px solid $p5;
+      margin: auto;
+      background-image: url("../img/christmas-1.jpg");
+      background-size: cover;
     }
+  }
+}
+#comingEvent {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  h1 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    @include h1;
+  }
+  .event-explain {
+    flex: 100%;
+  }
+  .event-circle {
+    width: 420px;
+    height: 420px;
+    border: 2px solid $p5;
+    border-radius: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    .circle-img {
+      width: 410px;
+      height: 410px;
+      background-color:green;
+      border-radius: 100%;
+      margin: auto;
+    }
+  }
+  h3 {
+    text-align: center;
+    @include h3;
+    color: $p2;
+    margin-bottom: 10px;
+  }
+  .event-title {
+    text-align: center;
+    font-family: $font;
+    font-weight: bold;
+    font: size 1.1em;
+    margin-top: 0;
+    color: $t2;
+  }
+  p {
+    color: $t1;
+    font-family: $font;
+  }
+  .decoration-circle{
+    background-color:$p4;
+    border-radius: 100%;
+    position:absolute;
+  }
+  .decoration-circle:nth-child(1){
+    width:30px;
+    height:30px;
+    opacity:.2;
+    top:-60px;
+    right:200px;
+  }
+  .decoration-circle:nth-child(2){
+    width:40px;
+    height:40px;
+    opacity:.3;
+    top:-8px;
+    right:35px;
+  }
+  .decoration-circle:nth-child(3){
+    width:55px;
+    height:55px;
+    opacity:.4;
+    top:153px;
+    right:-38px;
+  }
+  .decoration-circle:nth-child(4){
+    width:70px;
+    height:70px;
+    opacity:.5;
+    top:324px;
+    right:16px;
+  }
+  .decoration-circle:nth-child(5){
+    width:85px;
+    height:85px;
+    opacity:.6;
+    top:370px;
+    right:181px;
+  }
 }
