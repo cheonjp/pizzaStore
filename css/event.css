@@ -305,6 +305,78 @@ body {
   background-size: cover;
 }
 
+#d-currentevent .event-circle {
+  border-radius: 50%;
+  border: 2px solid #a17402;
+  margin: 30px;
+  display: inline;
+  float: left;
+}
+
+#d-currentevent .event-circle:nth-child(1) {
+  width: 50%;
+  height: auto;
+  padding-top: 50%;
+  position: relative;
+  margin-left: -150px;
+}
+
+#d-currentevent .event-circle:nth-child(1) img {
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 2.5%;
+  left: 2.5%;
+}
+
+#d-currentevent .event-circle:nth-child(2) {
+  width: 25%;
+  height: auto;
+  padding-top: 25%;
+  margin-top: 27%;
+  position: relative;
+}
+
+#d-currentevent .event-circle:nth-child(2) .changing-position {
+  position: absolute;
+  margin-left: 200%;
+  width: 100%;
+  bottom: -35px;
+}
+
+#d-currentevent .event-circle:nth-child(2) .changing-position .event-circle {
+  width: 100%;
+  height: auto;
+  padding-top: 100%;
+  margin-top: 27%;
+  position: relative;
+}
+
+#d-currentevent .event-circle:nth-child(2) .changing-position .event-circle img {
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 2.5%;
+  left: 2.5%;
+}
+
+#d-currentevent .event-circle:nth-child(2) img {
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 2.5%;
+  left: 2.5%;
+}
+
 #comingEvent {
   padding: 40px;
   display: -webkit-box;
@@ -348,7 +420,6 @@ body {
 #comingEvent .event-circle .circle-img {
   width: 410px;
   height: 410px;
-  background-color: green;
   border-radius: 100%;
   margin: auto;
 }
@@ -374,6 +445,9 @@ body {
 #comingEvent p {
   color: #6e6e6e;
   font-family: "Noto Sans KR", "Arial";
+  display: block;
+  margin: 20px auto;
+  max-width: 410px;
 }
 
 #comingEvent .decoration-circle {
@@ -391,34 +465,109 @@ body {
 }
 
 #comingEvent .decoration-circle:nth-child(2) {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   opacity: .3;
   top: -8px;
   right: 35px;
 }
 
 #comingEvent .decoration-circle:nth-child(3) {
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   opacity: .4;
   top: 153px;
   right: -38px;
 }
 
 #comingEvent .decoration-circle:nth-child(4) {
-  width: 70px;
-  height: 70px;
+  width: 45px;
+  height: 45px;
   opacity: .5;
   top: 324px;
   right: 16px;
 }
 
 #comingEvent .decoration-circle:nth-child(5) {
-  width: 85px;
-  height: 85px;
+  width: 50px;
+  height: 50px;
   opacity: .6;
   top: 370px;
   right: 181px;
+}
+
+.goback {
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.goback:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+#footer {
+  background-color: #c8c8c8;
+  padding: 40px;
+}
+
+#footer img {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+#footer #icon-box {
+  text-align: center;
+}
+
+#footer .facebook {
+  width: 40px;
+}
+
+#footer .facebook path {
+  fill: #2c2c2c;
+}
+
+#footer .instagram {
+  width: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#footer .instagram path {
+  fill: #2c2c2c;
+}
+
+#footer .twitter {
+  width: 40px;
+}
+
+#footer .twitter path {
+  fill: #2c2c2c;
+}
+
+#footer p {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+@media (min-width: 700px) {
+  .phone-menu {
+    display: none;
+  }
+  #currentevent {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  #d-menu {
+    display: none;
+  }
 }
 /*# sourceMappingURL=event.css.map */
