@@ -145,11 +145,13 @@ body {
   font-size: 2em;
   font-weight: bold;
   font-family: "Noto Serif KR", "Arial";
-  text-align: center;
   color: #975102;
   display: block;
   width: 100%;
   margin-top: 50px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .christmas {
@@ -305,11 +307,89 @@ body {
   background-size: cover;
 }
 
+#d-currentevent {
+  position: relative;
+  height: 100%;
+}
+
+#d-currentevent .d-christmas {
+  position: absolute;
+  left: 45%;
+  top: 80%;
+  max-width: 700px;
+}
+
+#d-currentevent .d-christmas h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Noto Serif KR", "Arial";
+  color: #975102;
+}
+
+#d-currentevent .d-christmas p {
+  font-family: "Noto Sans KR", "Arial";
+  color: #6e6e6e;
+  line-height: 20px;
+}
+
+#d-currentevent .d-christmas p b {
+  color: #d9643a;
+}
+
+#d-currentevent .d-christmas .btn {
+  border: 1px solid #d9643a;
+  overflow: hidden;
+  display: block;
+  background: none;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: #d9643a;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Noto Sans KR", "Arial";
+  position: relative;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  margin-top: 20px;
+  z-index: 1;
+  float: right;
+}
+
+#d-currentevent .d-christmas .btn .arrow {
+  vertical-align: middle;
+}
+
+#d-currentevent .d-christmas .btn:hover {
+  color: white;
+  letter-spacing: 1px;
+}
+
+#d-currentevent .d-christmas .btn::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d9643a;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#d-currentevent .d-christmas .btn:hover:after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 #d-currentevent .event-circle {
   border-radius: 50%;
   border: 2px solid #a17402;
   margin: 30px;
-  display: inline;
   float: left;
 }
 
@@ -336,34 +416,8 @@ body {
   width: 25%;
   height: auto;
   padding-top: 25%;
-  margin-top: 27%;
+  margin-top: 5%;
   position: relative;
-}
-
-#d-currentevent .event-circle:nth-child(2) .changing-position {
-  position: absolute;
-  margin-left: 200%;
-  width: 100%;
-  bottom: -35px;
-}
-
-#d-currentevent .event-circle:nth-child(2) .changing-position .event-circle {
-  width: 100%;
-  height: auto;
-  padding-top: 100%;
-  margin-top: 27%;
-  position: relative;
-}
-
-#d-currentevent .event-circle:nth-child(2) .changing-position .event-circle img {
-  width: 95%;
-  height: 95%;
-  border-radius: 50%;
-  display: block;
-  margin: auto;
-  position: absolute;
-  top: 2.5%;
-  left: 2.5%;
 }
 
 #d-currentevent .event-circle:nth-child(2) img {
@@ -377,6 +431,23 @@ body {
   left: 2.5%;
 }
 
+#d-currentevent .event-circle:nth-child(3) {
+  width: 25%;
+  padding-top: 25%;
+  height: auto;
+  position: relative;
+  margin-top: 5%;
+}
+
+#d-currentevent .event-circle:nth-child(3) img {
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5%;
+  left: 2.5%;
+}
+
 #comingEvent {
   padding: 40px;
   display: -webkit-box;
@@ -384,6 +455,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  clear: both;
 }
 
 #comingEvent h1 {
@@ -563,10 +635,21 @@ body {
   #currentevent {
     display: none;
   }
+  .christmas {
+    display: none;
+  }
+  .event-explain {
+    -webkit-box-flex: 33.3%;
+        -ms-flex: 33.3%;
+            flex: 33.3%;
+  }
 }
 
 @media (max-width: 700px) {
   #d-menu {
+    display: none;
+  }
+  #d-currentevent {
     display: none;
   }
 }

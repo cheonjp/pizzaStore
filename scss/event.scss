@@ -182,13 +182,17 @@ body {
   }
   h2 {
     @include h2;
-    text-align: center;
+    // text-align: center;
     color: $p2;
     display: block;
     width: 100%;
     margin-top: 50px;
+    max-width:1000px;
+    margin-left:auto;
+    margin-right:auto;
+    }
   }
-}
+
 .christmas {
   margin-bottom: 150px;
   clear: both;
@@ -213,6 +217,7 @@ body {
     float: right;
   }
 }
+
 #currentevent {
   .event-circle {
     border-radius: 100%;
@@ -282,11 +287,37 @@ body {
   }
 }
 #d-currentevent {
+  position:relative;
+  height:100%;
+  .d-christmas{
+    position:absolute;
+    left:45%;
+    top:80%;
+    max-width: 700px;
+    h3 {
+      @include h3;
+      color: $p2;
+    }
+    p {
+      font-family: $font;
+      color: $t1;
+      line-height: 20px;
+      b {
+        color: $p3;
+      }
+    }
+    .btn {
+      @include btn-style;
+      margin-top: 20px;
+      z-index:1;
+      float:right;
+    }
+  }
   .event-circle {
     border-radius: 50%;
     border: 2px solid $p5;
     margin: 30px;
-    display: inline;
+    // display: inline;
     float: left;
   }
   .event-circle:nth-child(1) {
@@ -310,34 +341,8 @@ body {
     width: 25%;
     height: auto;
     padding-top:25%;
-    margin-top:27%;
-    // margin-left:-1%;
+    margin-top:5%;
     position:relative;
-    // margin-left: -150px;
-    .changing-position{
-      position:absolute;
-      // right:-500px;
-      margin-left:200%;
-      width:100%;
-      bottom:-35px;
-      .event-circle {
-        width: 100%;
-        height: auto;
-        padding-top:100%;
-        margin-top:27%;
-        position:relative;
-        img{
-          width:95%;
-          height:95%;
-          border-radius: 50%;
-          display:block;
-          margin:auto;
-          position:absolute;
-          top:2.5%;
-          left:2.5%;
-        }
-      }
-    }
     img{
       width:95%;
       height:95%;
@@ -349,12 +354,27 @@ body {
       left:2.5%;
     }
   }
- 
+  .event-circle:nth-child(3){
+    width:25%;
+    padding-top:25%;
+    height:auto;
+    position:relative;
+    margin-top:5%;
+    img{
+      width:95%;
+      height:95%;
+      border-radius: 50%;
+      position: absolute;
+      top:2.5%;
+      left:2.5%;
+    }
+  }
 }
 #comingEvent {
   padding: 40px;
   display: flex;
   flex-wrap: wrap;
+  clear:both;
   h1 {
     text-align: center;
     display: block;
@@ -498,11 +518,18 @@ body {
 #currentevent{
   display:none;
 }
-
+.christmas{
+  display:none;
+}
+.event-explain{
+  flex:33.3%;
+}
 }
 @media(max-width:700px){
   #d-menu{
     display:none;
   }
-
+  #d-currentevent{
+    display:none;
+  }
 }
