@@ -191,13 +191,16 @@ body {
 
 #heroImg {
     width: 100%;
-    height: 250px;
+    height: 40%;
+    max-height: 500px;
     object-fit: cover;
     filter: sepia(40%)
 }
 
 #booking-section {
     padding: 0 40px 40px 40px;
+    max-width: 1000px;
+    margin: auto;
 
     h1 {
         @include h1;
@@ -237,17 +240,6 @@ body {
         }
     }
 
-    input[type=date] {
-        width: 45%;
-        height: 40px;
-        color: $t2;
-        margin-top: 5px;
-        margin-bottom: 30px;
-        padding-left: 10px;
-        padding-right: 10px;
-        font-family: "Noto Sans KR", "Arial";
-    }
-
     label {
         font-family: "Noto Sans KR", "Arial";
         font-weight: 500;
@@ -255,5 +247,131 @@ body {
         span {
             color: red;
         }
+    }
+
+    .dateTime {
+        display: flex;
+        flex-direction: row;
+
+        input[type=date] {
+            width: 100%;
+            height: 40px;
+            color: $t2;
+            margin-top: 5px;
+            margin-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-family: "Noto Sans KR", "Arial";
+            outline-color: $p3;
+        }
+
+        input[type=time] {
+            width: 100%;
+            height: 40px;
+            color: $t2;
+            margin-top: 5px;
+            margin-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-family: "Noto Sans KR", "Arial";
+        }
+
+        .date {
+            flex: 50%;
+            margin-right: 10px;
+        }
+
+        .time {
+            flex: 50%;
+            margin-left: 10px;
+        }
+    }
+
+    #require {
+        resize: none;
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+        outline-color: $p3;
+        font-family: "Noto Sans KR", "Arial";
+        letter-spacing: 1px;
+    }
+
+
+    .btn {
+        @include btn-style;
+        display: block;
+        margin: auto;
+        margin-top: 25px;
+    }
+}
+
+#footer {
+    background-color: #c8c8c8;
+    padding: 40px;
+
+    img {
+        display: block;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    #icon-box {
+        text-align: center;
+    }
+
+    .facebook {
+        width: 40px;
+
+        path {
+            fill: $t2;
+        }
+    }
+
+    .instagram {
+        width: 40px;
+        margin-left: 100px;
+        margin-right: 100px;
+
+        path {
+            fill: $t2;
+        }
+    }
+
+    .twitter {
+        width: 40px;
+
+        path {
+            fill: $t2;
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.1em;
+    }
+}
+
+.goback {
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.goback:hover {
+    transform: scale(1.15);
+}
+
+@media(max-width:700px) {
+    #d-menu {
+        display: none;
+    }
+}
+
+@media(min-width:700px) {
+    .phone-menu {
+        display: none;
     }
 }

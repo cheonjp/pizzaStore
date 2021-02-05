@@ -5,7 +5,8 @@ $p4: #9e2b02;
 $p5: #a17402;
 $p6: #30260a;
 $t2: #2c2c2c;
-$font: "Noto Sans KR", "Arial";
+$font: "Noto Sans KR",
+"Arial";
 
 @mixin h1 {
   color: $p2;
@@ -13,11 +14,13 @@ $font: "Noto Sans KR", "Arial";
   font-weight: bold;
   font-family: "Noto Serif KR", "Arial";
 }
+
 @mixin h2 {
   font-size: 2em;
   font-weight: bold;
   font-family: "Noto Serif KR", "Arial";
 }
+
 @mixin h3 {
   font-size: 1.5em;
   font-weight: bold;
@@ -43,11 +46,13 @@ $font: "Noto Sans KR", "Arial";
   .arrow {
     vertical-align: middle;
   }
+
   &:hover {
     color: white;
     // border:0px solid rgba(255,255,255,0);
     letter-spacing: 1px;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -66,21 +71,27 @@ $font: "Noto Sans KR", "Arial";
     transform: translateX(0);
   }
 }
+
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   overflow-x: hidden;
 }
+
 #header {
   display: flex;
   position: relative;
+
   a {
     margin: 10px 0 0 30px;
   }
+
   #d-menu {
     margin: auto;
+
     a {
       text-decoration: none;
       font-family: "Noto Sans KR", "Arial";
@@ -89,6 +100,7 @@ body {
       font-weight: bold;
       margin: 3vw;
       position: relative;
+
       &:after {
         content: "";
         position: absolute;
@@ -98,6 +110,7 @@ body {
         left: 5px;
         transform: scale(0);
       }
+
       &:hover:after {
         width: 30px;
         height: 30px;
@@ -108,6 +121,7 @@ body {
       }
     }
   }
+
   .phone-menu {
     height: 0;
     position: absolute;
@@ -115,6 +129,7 @@ body {
     top: 30px;
     cursor: pointer;
     height: 20px;
+
     div {
       width: 20px;
       background-color: black;
@@ -131,6 +146,7 @@ body {
   position: fixed;
   z-index: 10;
   right: 100%;
+
   .menu {
     color: white;
     font-family: "Noto Sans KR", "Arial";
@@ -139,15 +155,18 @@ body {
     margin-right: 40px;
     padding: 10px;
     border-bottom: 1px solid rgb(80, 80, 80);
+
     span {
       margin-right: 15px;
     }
   }
+
   #menu-div {
     background-image: linear-gradient(right, $p4, $p5);
     width: 100%;
     height: 120px;
   }
+
   h2 {
     color: white;
     text-align: center;
@@ -156,6 +175,7 @@ body {
     font-size: 1.4em;
     margin: 0;
   }
+
   p {
     margin-top: 0;
     color: white;
@@ -163,6 +183,7 @@ body {
     font-family: "Noto Sans KR", "Arial";
   }
 }
+
 #intro {
   background-image: url("../img/event.jpg");
   background-size: cover;
@@ -170,16 +191,19 @@ body {
   height: 46vw;
   min-height: 500px;
   padding: 100px 40px 40px 40px;
+
   h1 {
     @include h1;
     text-align: center;
   }
+
   p {
     max-width: 1000px;
     margin: auto;
     color: $t2;
     font-family: $font;
   }
+
   h2 {
     @include h2;
     // text-align: center;
@@ -187,29 +211,33 @@ body {
     display: block;
     width: 100%;
     margin-top: 50px;
-    max-width:1000px;
-    margin-left:auto;
-    margin-right:auto;
-    }
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
   }
+}
 
 .christmas {
   margin-bottom: 150px;
   clear: both;
+
   h3 {
     @include h3;
     color: $p2;
     text-align: center;
   }
+
   p {
     font-family: $font;
     color: $t1;
     margin-right: 40px;
     margin-left: 40px;
+
     b {
       color: $p3;
     }
   }
+
   .btn {
     @include btn-style;
     margin-top: 40px;
@@ -226,6 +254,7 @@ body {
     display: inline;
     float: left;
   }
+
   .event-circle:nth-child(1) {
     width: 300px;
     height: 300px;
@@ -234,6 +263,7 @@ body {
     margin-left: -150px;
     display: flex;
     align-items: center;
+
     div {
       width: 290px;
       height: 290px;
@@ -246,6 +276,7 @@ body {
       background-size: cover;
     }
   }
+
   .event-circle:nth-child(2) {
     width: 150px;
     height: 150px;
@@ -256,6 +287,7 @@ body {
     display: flex;
     align-items: center;
     margin: 185px 5% 50px 5%;
+
     div {
       width: 140px;
       height: 140px;
@@ -266,6 +298,7 @@ body {
       margin: auto;
     }
   }
+
   .event-circle:nth-child(3) {
     width: 150px;
     height: 150px;
@@ -275,6 +308,7 @@ body {
     margin-right: -200px;
     display: flex;
     align-items: center;
+
     div {
       width: 140px;
       height: 140px;
@@ -286,33 +320,40 @@ body {
     }
   }
 }
+
 #d-currentevent {
-  position:relative;
-  height:100%;
-  .d-christmas{
-    position:absolute;
-    left:45%;
-    top:78%;
+  position: relative;
+  height: 100%;
+
+  .d-christmas {
+    position: absolute;
+    left: 45%;
+    top: 78%;
     max-width: 700px;
+
     h3 {
       @include h3;
       color: $p2;
     }
+
     p {
       font-family: $font;
       color: $t1;
       line-height: 20px;
+
       b {
         color: $p3;
       }
     }
+
     .btn {
       @include btn-style;
       margin-top: 20px;
-      z-index:1;
-      float:right;
+      z-index: 1;
+      float: right;
     }
   }
+
   .event-circle {
     border-radius: 50%;
     border: 2px solid $p5;
@@ -320,75 +361,85 @@ body {
     // display: inline;
     float: left;
   }
+
   .event-circle:nth-child(1) {
     width: 50%;
     height: auto;
-    padding-top:50%;
-    position:relative;
+    padding-top: 50%;
+    position: relative;
     margin-left: -150px;
-    img{
-      width:95%;
-      height:95%;
+
+    img {
+      width: 95%;
+      height: 95%;
       border-radius: 50%;
-      display:block;
-      margin:auto;
-      position:absolute;
-      top:2.5%;
-      left:2.5%;
+      display: block;
+      margin: auto;
+      position: absolute;
+      top: 2.5%;
+      left: 2.5%;
     }
   }
+
   .event-circle:nth-child(2) {
     width: 25%;
     height: auto;
-    padding-top:25%;
-    margin-top:5%;
-    position:relative;
-    img{
-      width:95%;
-      height:95%;
+    padding-top: 25%;
+    margin-top: 5%;
+    position: relative;
+
+    img {
+      width: 95%;
+      height: 95%;
       border-radius: 50%;
-      display:block;
-      margin:auto;
-      position:absolute;
-      top:2.5%;
-      left:2.5%;
+      display: block;
+      margin: auto;
+      position: absolute;
+      top: 2.5%;
+      left: 2.5%;
     }
   }
-  .event-circle:nth-child(3){
-    width:25%;
-    padding-top:25%;
-    height:auto;
-    position:relative;
-    margin-top:5%;
-    img{
-      width:95%;
-      height:95%;
+
+  .event-circle:nth-child(3) {
+    width: 25%;
+    padding-top: 25%;
+    height: auto;
+    position: relative;
+    margin-top: 5%;
+
+    img {
+      width: 95%;
+      height: 95%;
       border-radius: 50%;
       position: absolute;
-      top:2.5%;
-      left:2.5%;
+      top: 2.5%;
+      left: 2.5%;
     }
   }
 }
+
 #comingEvent {
   padding: 40px;
   display: flex;
   flex-wrap: wrap;
-  clear:both;
+  clear: both;
+
   h1 {
     text-align: center;
     display: block;
     width: 100%;
     @include h1;
   }
+
   .event-explain {
     flex: 33%;
-    padding:2%;
+    padding: 2%;
   }
+
   .event-circle {
-    width:100%;
-    padding-top:100%;
-    height:auto;
+    width: 100%;
+    padding-top: 100%;
+    height: auto;
     border: 2px solid $p5;
     border-radius: 100%;
     margin: auto;
@@ -397,24 +448,26 @@ body {
     margin-top: 30px;
 
     .circle-img {
-      position:absolute;
-      background-size:cover;
-      width:95%;
-      height:95%;
+      position: absolute;
+      background-size: cover;
+      width: 95%;
+      height: 95%;
       border-radius: 50%;
       margin: auto;
-      top:2.5%;
-      left:2.5%;
-      border:1px solid $p5;
+      top: 2.5%;
+      left: 2.5%;
+      border: 1px solid $p5;
     }
 
   }
+
   h3 {
     text-align: center;
     @include h3;
     color: $p2;
     margin-bottom: 10px;
   }
+
   .event-title {
     text-align: center;
     font-family: $font;
@@ -423,47 +476,54 @@ body {
     margin-top: 0;
     color: $t2;
   }
+
   p {
     color: $t1;
     font-family: $font;
-    display:block;
-    margin:20px auto;
-    max-width:410px;
+    display: block;
+    margin: 20px auto;
+    max-width: 410px;
   }
-  .decoration-circle{
-    background-color:$p4;
+
+  .decoration-circle {
+    background-color: $p4;
     border-radius: 100%;
-    position:absolute;
+    position: absolute;
   }
-  .decoration-circle:nth-child(1){
-    width:10px;
-    height:10px;
-    opacity:.2;
-    top:-2%;
-    right:25%;
+
+  .decoration-circle:nth-child(1) {
+    width: 10px;
+    height: 10px;
+    opacity: .2;
+    top: -2%;
+    right: 25%;
   }
-  .decoration-circle:nth-child(2){
-    width:15px;
-    height:15px;
-    opacity:.3;
-    top:16%;
-    right:0;
+
+  .decoration-circle:nth-child(2) {
+    width: 15px;
+    height: 15px;
+    opacity: .3;
+    top: 16%;
+    right: 0;
   }
-  .decoration-circle:nth-child(3){
-    width:20px;
-    height:20px;
-    opacity:.4;
-    top:58%;
-    right:-6%;
+
+  .decoration-circle:nth-child(3) {
+    width: 20px;
+    height: 20px;
+    opacity: .4;
+    top: 58%;
+    right: -6%;
   }
-  .decoration-circle:nth-child(4){
-    width:25px;
-    height:25px;
-    opacity:.5;
-    top:89%;
-    right:14%;
+
+  .decoration-circle:nth-child(4) {
+    width: 25px;
+    height: 25px;
+    opacity: .5;
+    top: 89%;
+    right: 14%;
   }
 }
+
 .goback {
   cursor: pointer;
   position: fixed;
@@ -471,68 +531,85 @@ body {
   bottom: 20px;
   transition: all 0.3s ease-in-out;
 }
+
 .goback:hover {
   transform: scale(1.15);
 }
+
 #footer {
   background-color: #c8c8c8;
   padding: 40px;
+
   img {
     display: block;
     margin: auto;
     cursor: pointer;
   }
+
   #icon-box {
     text-align: center;
   }
+
   .facebook {
     width: 40px;
+
     path {
       fill: $t2;
     }
   }
+
   .instagram {
     width: 40px;
     margin-left: 100px;
     margin-right: 100px;
+
     path {
       fill: $t2;
     }
   }
+
   .twitter {
     width: 40px;
+
     path {
       fill: $t2;
     }
   }
+
   p {
     text-align: center;
     font-size: 1.1em;
   }
 }
 
-@media(min-width:700px){
-.phone-menu{
-  display:none;
-}
-#currentevent{
-  display:none;
-}
-.christmas{
-  display:none;
-}
-}
-@media(max-width:700px){
-  #d-menu{
-    display:none;
+@media(min-width:700px) {
+  .phone-menu {
+    display: none;
   }
-  #d-currentevent{
-    display:none;
+
+  #currentevent {
+    display: none;
   }
-  #comingEvent{
+
+  .christmas {
+    display: none;
+  }
+}
+
+@media(max-width:700px) {
+  #d-menu {
+    display: none;
+  }
+
+  #d-currentevent {
+    display: none;
+  }
+
+  #comingEvent {
     flex-direction: column;
   }
-  .event-explain{
-    margin-bottom:150px;
+
+  .event-explain {
+    margin-bottom: 20%;
   }
 }

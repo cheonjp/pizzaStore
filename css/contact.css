@@ -119,7 +119,8 @@ body {
 
 #heroImg {
   width: 100%;
-  height: 250px;
+  height: 40%;
+  max-height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-filter: sepia(40%);
@@ -128,6 +129,8 @@ body {
 
 #booking-section {
   padding: 0 40px 40px 40px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 #booking-section h1 {
@@ -171,8 +174,39 @@ body {
   outline-color: #d9643a;
 }
 
-#booking-section input[type=date] {
-  width: 45%;
+#booking-section label {
+  font-family: "Noto Sans KR", "Arial";
+  font-weight: 500;
+}
+
+#booking-section label span {
+  color: red;
+}
+
+#booking-section .dateTime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#booking-section .dateTime input[type=date] {
+  width: 100%;
+  height: 40px;
+  color: #2c2c2c;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Noto Sans KR", "Arial";
+  outline-color: #d9643a;
+}
+
+#booking-section .dateTime input[type=time] {
+  width: 100%;
   height: 40px;
   color: #2c2c2c;
   margin-top: 5px;
@@ -182,12 +216,149 @@ body {
   font-family: "Noto Sans KR", "Arial";
 }
 
-#booking-section label {
-  font-family: "Noto Sans KR", "Arial";
-  font-weight: 500;
+#booking-section .dateTime .date {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  margin-right: 10px;
 }
 
-#booking-section label span {
-  color: red;
+#booking-section .dateTime .time {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  margin-left: 10px;
+}
+
+#booking-section #require {
+  resize: none;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  outline-color: #d9643a;
+  font-family: "Noto Sans KR", "Arial";
+  letter-spacing: 1px;
+}
+
+#booking-section .btn {
+  border: 1px solid #d9643a;
+  overflow: hidden;
+  display: block;
+  background: none;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: #d9643a;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Noto Sans KR", "Arial";
+  position: relative;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+}
+
+#booking-section .btn .arrow {
+  vertical-align: middle;
+}
+
+#booking-section .btn:hover {
+  color: white;
+  letter-spacing: 1px;
+}
+
+#booking-section .btn::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d9643a;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#booking-section .btn:hover:after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+#footer {
+  background-color: #c8c8c8;
+  padding: 40px;
+}
+
+#footer img {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+#footer #icon-box {
+  text-align: center;
+}
+
+#footer .facebook {
+  width: 40px;
+}
+
+#footer .facebook path {
+  fill: #2c2c2c;
+}
+
+#footer .instagram {
+  width: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#footer .instagram path {
+  fill: #2c2c2c;
+}
+
+#footer .twitter {
+  width: 40px;
+}
+
+#footer .twitter path {
+  fill: #2c2c2c;
+}
+
+#footer p {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.goback {
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.goback:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+@media (max-width: 700px) {
+  #d-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .phone-menu {
+    display: none;
+  }
 }
 /*# sourceMappingURL=contact.css.map */

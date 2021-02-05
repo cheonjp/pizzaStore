@@ -31,11 +31,13 @@ $t2: #2c2c2c;
   .arrow {
     vertical-align: middle;
   }
+
   &:hover {
     color: white;
     // border:0px solid rgba(255,255,255,0);
     letter-spacing: 1px;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -59,30 +61,38 @@ $t2: #2c2c2c;
   .phone-menu {
     display: none;
   }
+
   .image {
     order: 2;
   }
+
   .hero {
     order: 1;
   }
+
   #images {
     flex: 50%;
     order: 2;
+
     img {
       width: 600px;
       display: none;
     }
   }
+
   #review {
     flex: 50%;
     order: 1;
     max-width: 600px;
   }
+
   #hero-section {
     display: none;
+
     .hero {
       display: none;
     }
+
     .image {
       display: none;
     }
@@ -93,7 +103,12 @@ $t2: #2c2c2c;
   #d-menu {
     display: none;
   }
-  #d-hero-section {
+
+  .line {
+    display: none;
+  }
+
+  #hero-cover {
     display: none;
   }
 }
@@ -101,46 +116,59 @@ $t2: #2c2c2c;
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: auto;
 }
 
-[class*="col-"] {
-  float: left;
-}
+// [class*="col-"] {
+//   float: left;
+// }
+
 .col-1 {
   width: 8.33%;
 }
+
 .col-2 {
   width: 16.66%;
 }
+
 .col-3 {
   width: 25%;
 }
+
 .col-4 {
   width: 33.33%;
 }
+
 .col-5 {
   width: 41.66%;
 }
+
 .col-6 {
   width: 50%;
 }
+
 .col-7 {
   width: 58.33%;
 }
+
 .col-8 {
   width: 66.66%;
 }
+
 .col-9 {
   width: 75%;
 }
+
 .col-10 {
   width: 83.33%;
 }
+
 .col-11 {
   width: 91.66%;
 }
+
 .col-12 {
   width: 100%;
 }
@@ -148,11 +176,23 @@ body {
 #header {
   display: flex;
   position: relative;
+
+  // box-shadow: 0 0px 3px 2px rgb(150, 150, 150);
+  .line {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    box-shadow: 0 0 3px 1px rgb(150, 150, 150);
+    bottom: 0;
+  }
+
   a {
     margin: 10px 0 0 30px;
   }
+
   #d-menu {
     margin: auto;
+
     a {
       text-decoration: none;
       font-family: "Noto Sans KR", "Arial";
@@ -161,6 +201,7 @@ body {
       font-weight: bold;
       margin: 3vw;
       position: relative;
+
       &:after {
         content: "";
         position: absolute;
@@ -170,6 +211,7 @@ body {
         left: 5px;
         transform: scale(0);
       }
+
       &:hover:after {
         width: 30px;
         height: 30px;
@@ -180,6 +222,7 @@ body {
       }
     }
   }
+
   .phone-menu {
     height: 0;
     position: absolute;
@@ -187,6 +230,7 @@ body {
     top: 30px;
     cursor: pointer;
     height: 20px;
+
     div {
       width: 20px;
       background-color: black;
@@ -202,24 +246,29 @@ body {
   align-items: stretch;
   margin-left: 40px;
   position: relative;
+
   .hero {
     z-index: 1;
     flex: 100%;
     margin-top: -100px;
     margin-right: 40px;
+
     h1 {
       font-family: "Noto Serif KR", "Arial";
       color: $p2;
       font-size: 3em;
     }
+
     p {
       font-family: "Noto Sans KR", "Arial";
       color: $t1;
     }
   }
+
   .image {
     flex: 100%;
     text-align: right;
+
     img {
       width: 100%;
       min-width: 300px;
@@ -233,11 +282,12 @@ body {
   // margin-top: 100px;
   background-size: cover;
   padding: 50px 40px 50px 40px;
-  .padding{
-    margin:auto;
-    max-width:1660px;
+
+  .padding {
+    margin: auto;
+    max-width: 1660px;
   }
- 
+
   .greeding {
     position: relative;
     max-width: 600px;
@@ -245,6 +295,7 @@ body {
     border-radius: 25px;
     padding: 25px 25px 150px 25px;
     overflow: hidden;
+
     .circle {
       width: 400px;
       height: 400px;
@@ -255,22 +306,26 @@ body {
       top: -150px;
       right: -100px;
     }
+
     h2 {
       text-align: center;
       font-family: "Noto Serif KR", "Arial";
       color: $p2;
       font-size: 2em;
     }
+
     p {
       font-family: "Noto Sans KR", "Arial";
       color: $t1;
     }
+
     .icon {
       color: $p3;
       font-size: 50px;
       text-align: center;
       display: block;
     }
+
     h3 {
       text-align: center;
       font-size: 1.1em;
@@ -278,6 +333,7 @@ body {
       color: $p3;
       margin-top: 10px;
     }
+
     .icon-word {
       font-family: "Noto Sans KR", "Arial";
       width: 200px;
@@ -289,11 +345,13 @@ body {
 .btn {
   @include btn-style;
 }
+
 #btn-position {
   position: relative;
   max-width: 1740px;
-  margin:auto;
+  margin: auto;
   z-index: 1;
+
   div {
     position: absolute;
     top: -150px;
@@ -305,9 +363,10 @@ body {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin:auto;
-  max-width:1700px;
+  margin: auto;
+  max-width: 1700px;
   padding: 100px 40px 32px 40px;
+
   h1 {
     color: $p2;
     font-size: 2.5em;
@@ -316,6 +375,7 @@ body {
     display: block;
     width: 100%;
   }
+
   .circle {
     width: 500px;
     height: 500px;
@@ -327,13 +387,16 @@ body {
     left: -250px;
     z-index: -1;
   }
+
   p {
     font-family: "Noto Sans KR", "Arial";
     color: $t1;
   }
+
   #images {
     width: 100%;
     margin-top: 50px;
+
     img {
       min-width: 400px;
       width: 100%;
@@ -342,14 +405,17 @@ body {
       margin: auto;
     }
   }
+
   #images {
     width: 100%;
   }
+
   #review {
     border: 1px solid $p2;
     width: 100%;
     border-radius: 25px;
     padding: 15px;
+
     #container {
       background-color: rgba(161, 116, 2, 0.3);
       width: 100%;
@@ -357,6 +423,7 @@ body {
       border-radius: 25px;
       padding: 20px;
       overflow: hidden;
+
       .face {
         width: 80px;
         height: 80px;
@@ -364,18 +431,22 @@ body {
         display: block;
         margin: 20px auto 10px auto;
       }
+
       .stars {
         text-align: center;
       }
+
       .star {
         color: $p3;
       }
+
       .name {
         display: block;
         text-align: center;
         font-family: "Noto Sans KR", "Arial";
         font-weight: bold;
       }
+
       .statement {
         color: $t2;
         display: block;
@@ -384,6 +455,7 @@ body {
         width: 100%;
         max-width: 550px;
       }
+
       hr {
         height: 1px;
         background-color: white;
@@ -396,39 +468,49 @@ body {
 #footer {
   background-color: #c8c8c8;
   padding: 40px;
+
   img {
     display: block;
     margin: auto;
     cursor: pointer;
   }
+
   #icon-box {
     text-align: center;
   }
+
   .facebook {
     width: 40px;
+
     path {
       fill: $t2;
     }
   }
+
   .instagram {
     width: 40px;
     margin-left: 100px;
     margin-right: 100px;
+
     path {
       fill: $t2;
     }
   }
+
   .twitter {
     width: 40px;
+
     path {
       fill: $t2;
     }
   }
+
   p {
     text-align: center;
     font-size: 1.1em;
   }
 }
+
 .goback {
   cursor: pointer;
   position: fixed;
@@ -436,6 +518,7 @@ body {
   bottom: 20px;
   transition: all 0.3s ease-in-out;
 }
+
 .goback:hover {
   transform: scale(1.15);
 }
@@ -447,6 +530,7 @@ body {
   position: fixed;
   z-index: 10;
   right: 100%;
+
   .menu {
     color: white;
     font-family: "Noto Sans KR", "Arial";
@@ -455,15 +539,18 @@ body {
     margin-right: 40px;
     padding: 10px;
     border-bottom: 1px solid rgb(80, 80, 80);
+
     span {
       margin-right: 15px;
     }
   }
+
   #menu-div {
     background-image: linear-gradient(right, $p4, $p5);
     width: 100%;
     height: 120px;
   }
+
   h2 {
     color: white;
     text-align: center;
@@ -472,6 +559,7 @@ body {
     font-size: 1.4em;
     margin: 0;
   }
+
   p {
     margin-top: 0;
     color: white;
@@ -481,18 +569,21 @@ body {
 }
 
 #d-hero-section {
+  display: flex;
   flex-wrap: wrap;
+
   .hero {
-    box-shadow: 0 -2px 2px gray;
     background-color: rgb(200, 200, 200);
     padding: 30px;
     flex: 50%;
     padding-top: 100px;
+
     h1 {
       font-family: "Noto Sans KR", "Arial";
       color: $p2;
       font-size: 2.5em;
     }
+
     #explain {
       position: relative;
       width: 100%;
@@ -502,42 +593,50 @@ body {
       border-radius: 20px;
       max-width: 600px;
       margin: auto;
+
       h3 {
         color: $p3;
       }
+
       p {
         color: white;
         font-family: "Noto Sans KR", "Arial";
       }
+
       #price {
         border-bottom: 1px solid $p5;
         display: inline-block;
         padding-right: 150px;
         padding-bottom: 10px;
       }
+
       .btn {
         z-index: 1;
         float: right;
         color: $p5;
         border-color: $p5;
+
         &:hover {
           color: white;
         }
+
         &:after {
           background-color: $p5;
         }
       }
     }
   }
+
   .image {
-    box-shadow: 0 -2px 2px gray;
     position: relative;
     padding-left: 50px;
-    flex: 50%;
+    align-self: center;
+
     #slide-btn {
       position: absolute;
-      bottom: 20%;
+      bottom: 40%;
       left: 10px;
+
       .slide-circle {
         width: 15px;
         height: 15px;
@@ -547,12 +646,13 @@ body {
         cursor: pointer;
       }
     }
+
     img {
       width: 100%;
       max-width: 650px;
+      min-width: 300px;
       float: right;
-      vertical-align: middle;
-      display: inline-block;
+      object-fit: cover;
     }
   }
 }
