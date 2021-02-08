@@ -206,11 +206,12 @@ body {
 
   h2 {
     @include h2;
-    // text-align: center;
+    text-align: center;
     color: $p2;
     display: block;
     width: 100%;
     margin-top: 50px;
+
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -328,7 +329,7 @@ body {
   .d-christmas {
     position: absolute;
     left: 45%;
-    top: 78%;
+    top: 70%;
     max-width: 700px;
 
     h3 {
@@ -385,7 +386,7 @@ body {
     width: 25%;
     height: auto;
     padding-top: 25%;
-    margin-top: 5%;
+    // margin-top: 5%;
     position: relative;
 
     img {
@@ -405,7 +406,7 @@ body {
     padding-top: 25%;
     height: auto;
     position: relative;
-    margin-top: 5%;
+    // margin-top: 5%;
 
     img {
       width: 95%;
@@ -419,7 +420,7 @@ body {
 }
 
 #comingEvent {
-  padding: 40px;
+  padding: 100px 40px 40px 40px;
   display: flex;
   flex-wrap: wrap;
   clear: both;

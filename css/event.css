@@ -145,6 +145,7 @@ body {
   font-size: 2em;
   font-weight: bold;
   font-family: "Noto Serif KR", "Arial";
+  text-align: center;
   color: #975102;
   display: block;
   width: 100%;
@@ -315,7 +316,7 @@ body {
 #d-currentevent .d-christmas {
   position: absolute;
   left: 45%;
-  top: 78%;
+  top: 70%;
   max-width: 700px;
 }
 
@@ -416,7 +417,6 @@ body {
   width: 25%;
   height: auto;
   padding-top: 25%;
-  margin-top: 5%;
   position: relative;
 }
 
@@ -436,7 +436,6 @@ body {
   padding-top: 25%;
   height: auto;
   position: relative;
-  margin-top: 5%;
 }
 
 #d-currentevent .event-circle:nth-child(3) img {
@@ -449,7 +448,7 @@ body {
 }
 
 #comingEvent {
-  padding: 40px;
+  padding: 100px 40px 40px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
