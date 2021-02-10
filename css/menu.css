@@ -184,7 +184,7 @@ body {
 
 #menu-section #detail .explain {
   background-color: white;
-  padding: 40px;
+  padding: 10px 20px;
   position: relative;
   border-radius: 0 0 20px 20px;
   overflow: hidden;
@@ -194,14 +194,21 @@ body {
   text-align: center;
   font-family: "Noto Sans KR", "Arial";
   color: #975102;
+  position: relative;
 }
 
-#menu-section #detail .explain .recommend {
-  font-size: 14px;
-  color: white;
-  background-color: red;
-  padding: 2px 5px;
-  border-radius: 8px;
+#menu-section #detail .explain #menu-name .btn {
+  cursor: pointer;
+  color: black;
+  position: absolute;
+}
+
+#menu-section #detail .explain #menu-name .left {
+  left: 0;
+}
+
+#menu-section #detail .explain #menu-name .right {
+  right: 0;
 }
 
 #menu-section #detail .explain .menu-introduction {
@@ -214,12 +221,9 @@ body {
   font-weight: bold;
 }
 
-#menu-section #detail .explain .veggie {
-  color: green;
-}
-
 #menu-section #detail .large {
   border: 1px solid #a17402;
+  width: 150px;
   padding: 10px 15px 10px 55px;
   border-radius: 20px;
   font-size: 17px;
@@ -229,6 +233,7 @@ body {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  margin: 10px;
 }
 
 #menu-section #detail .large:after {
@@ -270,6 +275,7 @@ body {
 
 #menu-section #detail .regular {
   border: 1px solid #d9643a;
+  width: 150px;
   padding: 10px 15px 10px 55px;
   border-radius: 20px;
   font-size: 17px;
@@ -279,11 +285,12 @@ body {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  margin: 10px;
 }
 
 #menu-section #detail .regular:after {
   position: absolute;
-  content: 'L';
+  content: 'R';
   background-color: #d9643a;
   color: white;
   left: 0;
@@ -316,5 +323,63 @@ body {
 #menu-section #detail .regular:hover:before {
   -webkit-transform: translateX(-20%);
           transform: translateX(-20%);
+}
+
+#menu-section #detail .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#menu-section #items {
+  margin-top: 40px;
+}
+
+#menu-section #items .item {
+  padding: 20px;
+}
+
+#menu-section #items .item-name {
+  color: #d9643a;
+  text-align: center;
+  font-family: "Noto Sans KR", "Arial";
+}
+
+#menu-section #items .item-explain {
+  color: white;
+  font-family: "Noto Sans KR", "Arial";
+  text-align: center;
+}
+
+#menu-section #items .price {
+  color: white;
+  text-align: center;
+  font-family: "Noto Sans KR", "Arial";
+}
+
+#menu-section #items .item-img {
+  width: 100%;
+}
+
+#menu-section #items .item-ingredient {
+  text-align: center;
+  color: #d9643a;
+}
+
+.recommend {
+  font-size: 14px;
+  color: white;
+  background-color: red;
+  padding: 2px 5px;
+  border-radius: 8px;
+}
+
+.veggie {
+  color: green;
 }
 /*# sourceMappingURL=menu.css.map */

@@ -249,7 +249,7 @@ body {
 
         .explain {
             background-color: white;
-            padding: 40px;
+            padding: 10px 20px;
             position: relative;
             border-radius: 0 0 20px 20px;
             overflow: hidden;
@@ -258,14 +258,21 @@ body {
                 text-align: center;
                 font-family: $font;
                 color: $p2;
-            }
+                position: relative;
 
-            .recommend {
-                font-size: 14px;
-                color: white;
-                background-color: red;
-                padding: 2px 5px;
-                border-radius: 8px;
+                .btn {
+                    cursor: pointer;
+                    color: black;
+                    position: absolute;
+                }
+
+                .left {
+                    left: 0;
+                }
+
+                .right {
+                    right: 0;
+                }
             }
 
             .menu-introduction {
@@ -278,14 +285,11 @@ body {
                 color: $p3;
                 font-weight: bold;
             }
-
-            .veggie {
-                color: green;
-            }
         }
 
         .large {
             border: 1px solid $p5;
+            width: 150px;
             padding: 10px 15px 10px 55px;
             border-radius: 20px;
             font-size: 17px;
@@ -295,6 +299,7 @@ body {
             position: relative;
             overflow: hidden;
             cursor: pointer;
+            margin: 10px;
 
             &:after {
                 position: absolute;
@@ -333,6 +338,7 @@ body {
 
         .regular {
             border: 1px solid $p3;
+            width: 150px;
             padding: 10px 15px 10px 55px;
             border-radius: 20px;
             font-size: 17px;
@@ -342,10 +348,11 @@ body {
             position: relative;
             overflow: hidden;
             cursor: pointer;
+            margin: 10px;
 
             &:after {
                 position: absolute;
-                content: 'L';
+                content: 'R';
                 background-color: $p3;
                 color: white;
                 left: 0;
@@ -376,6 +383,60 @@ body {
             &:hover:before {
                 transform: translateX(-20%);
             }
+
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
     }
+
+    #items {
+        margin-top: 40px;
+
+        .item {
+            padding: 20px;
+        }
+
+        .item-name {
+            color: $p3;
+            text-align: center;
+            font-family: $font;
+        }
+
+        .item-explain {
+            color: white;
+            font-family: $font;
+            text-align: center;
+        }
+
+        .price {
+            color: white;
+            text-align: center;
+            font-family: $font;
+        }
+
+        .item-img {
+            width: 100%;
+        }
+
+        .item-ingredient {
+            text-align: center;
+            color: $p3;
+        }
+    }
+}
+
+.recommend {
+    font-size: 14px;
+    color: white;
+    background-color: red;
+    padding: 2px 5px;
+    border-radius: 8px;
+}
+
+.veggie {
+    color: green;
 }
