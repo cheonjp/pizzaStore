@@ -184,15 +184,20 @@ body {
     }
 }
 
+.background {
+    background-color: $p6;
+    padding: 40px;
+}
+
 #menu-section {
     background-color: $p6;
-    padding: 20px 40px 40px 40px;
+    padding: 20px 0 40px 0;
+    max-width: 1200px;
+    margin: auto;
 
     #menus {
         border-bottom: 2px solid $p5;
         padding: 20px;
-        // display: flex;
-        // flex-direction: row;
     }
 
     .menu-sort {
@@ -206,6 +211,7 @@ body {
         padding: 5px;
         transition: .3s;
         margin-top: 10px;
+        font-size: 17px;
 
         &:hover {
             color: $p3;
@@ -244,6 +250,7 @@ body {
 
             .pizza-img {
                 width: 50%;
+                max-width: 400px;
             }
         }
 
@@ -278,6 +285,8 @@ body {
             .menu-introduction {
                 font-family: $font;
                 color: $t1;
+                // text-align: center;
+                ;
 
             }
 
@@ -394,10 +403,18 @@ body {
     }
 
     #items {
+        margin: auto;
+        // max-width: 1200px;
         margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
         .item {
-            padding: 20px;
+            cursor: pointer;
+            margin: 20px;
+            max-width: 300px;
+
         }
 
         .item-name {
@@ -416,17 +433,85 @@ body {
             color: white;
             text-align: center;
             font-family: $font;
+            margin: 5px 10px;
         }
 
         .item-img {
             width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: auto;
         }
 
         .item-ingredient {
             text-align: center;
             color: $p3;
         }
+
+        .price-container {
+            display: flex;
+            justify-content: center;
+        }
     }
+}
+
+#footer {
+    background-color: #c8c8c8;
+    padding: 40px;
+
+    img {
+        display: block;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    #icon-box {
+        text-align: center;
+    }
+
+    .facebook {
+        width: 40px;
+
+        path {
+            fill: $t2;
+        }
+    }
+
+    .instagram {
+        width: 40px;
+        margin-left: 100px;
+        margin-right: 100px;
+
+        path {
+            fill: $t2;
+        }
+    }
+
+    .twitter {
+        width: 40px;
+
+        path {
+            fill: $t2;
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.1em;
+    }
+}
+
+.goback {
+    cursor: pointer;
+    position: fixed;
+    color: $p5;
+    right: 20px;
+    bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.goback:hover {
+    transform: scale(1.15);
 }
 
 .recommend {
@@ -439,4 +524,20 @@ body {
 
 .veggie {
     color: green;
+}
+
+@media(max-width:700px) {
+    #d-menu {
+        display: none;
+    }
+}
+
+@media(min-width:700px) {
+    .phone-menu {
+        display: none;
+    }
+
+    #menus {
+        display: flex;
+    }
 }

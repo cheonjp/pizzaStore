@@ -117,9 +117,16 @@ body {
   font-family: "Noto Sans KR", "Arial";
 }
 
+.background {
+  background-color: #30260a;
+  padding: 40px;
+}
+
 #menu-section {
   background-color: #30260a;
-  padding: 20px 40px 40px 40px;
+  padding: 20px 0 40px 0;
+  max-width: 1200px;
+  margin: auto;
 }
 
 #menu-section #menus {
@@ -139,6 +146,7 @@ body {
   -webkit-transition: .3s;
   transition: .3s;
   margin-top: 10px;
+  font-size: 17px;
 }
 
 #menu-section .menu-sort:hover {
@@ -180,6 +188,7 @@ body {
 
 #menu-section #detail .image .pizza-img {
   width: 50%;
+  max-width: 400px;
 }
 
 #menu-section #detail .explain {
@@ -337,11 +346,22 @@ body {
 }
 
 #menu-section #items {
+  margin: auto;
   margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #menu-section #items .item {
-  padding: 20px;
+  cursor: pointer;
+  margin: 20px;
+  max-width: 300px;
 }
 
 #menu-section #items .item-name {
@@ -360,15 +380,89 @@ body {
   color: white;
   text-align: center;
   font-family: "Noto Sans KR", "Arial";
+  margin: 5px 10px;
 }
 
 #menu-section #items .item-img {
   width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: auto;
 }
 
 #menu-section #items .item-ingredient {
   text-align: center;
   color: #d9643a;
+}
+
+#menu-section #items .price-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#footer {
+  background-color: #c8c8c8;
+  padding: 40px;
+}
+
+#footer img {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+#footer #icon-box {
+  text-align: center;
+}
+
+#footer .facebook {
+  width: 40px;
+}
+
+#footer .facebook path {
+  fill: #2c2c2c;
+}
+
+#footer .instagram {
+  width: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#footer .instagram path {
+  fill: #2c2c2c;
+}
+
+#footer .twitter {
+  width: 40px;
+}
+
+#footer .twitter path {
+  fill: #2c2c2c;
+}
+
+#footer p {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.goback {
+  cursor: pointer;
+  position: fixed;
+  color: #a17402;
+  right: 20px;
+  bottom: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.goback:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .recommend {
@@ -381,5 +475,22 @@ body {
 
 .veggie {
   color: green;
+}
+
+@media (max-width: 700px) {
+  #d-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .phone-menu {
+    display: none;
+  }
+  #menus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=menu.css.map */
