@@ -2,6 +2,9 @@
   .phone-menu {
     display: none;
   }
+  #menu-box {
+    display: none;
+  }
   .image {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -530,7 +533,9 @@ body {
   background-color: #30260a;
   position: fixed;
   z-index: 10;
-  right: 100%;
+  left: -100%;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 #menu-box .menu {
@@ -665,5 +670,28 @@ body {
   float: right;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.active {
+  -webkit-animation: changeOpacity 1s;
+          animation: changeOpacity 1s;
+}
+
+@-webkit-keyframes changeOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes changeOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=main.css.map */

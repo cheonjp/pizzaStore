@@ -62,6 +62,10 @@ $t2: #2c2c2c;
     display: none;
   }
 
+  #menu-box {
+    display: none;
+  }
+
   .image {
     order: 2;
   }
@@ -529,7 +533,8 @@ body {
   background-color: $p6;
   position: fixed;
   z-index: 10;
-  right: 100%;
+  left: -100%;
+  transition: .3s ease-in-out;
 
   .menu {
     color: white;
@@ -654,5 +659,19 @@ body {
       float: right;
       object-fit: cover;
     }
+  }
+}
+
+.active {
+  animation: changeOpacity 1s;
+}
+
+@keyframes changeOpacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
