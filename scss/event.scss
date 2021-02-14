@@ -76,6 +76,10 @@ $font: "Noto Sans KR",
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -145,7 +149,8 @@ body {
   background-color: $p6;
   position: fixed;
   z-index: 10;
-  right: 100%;
+  left: -100%;
+  transition: .3s ease-in-out;
 
   .menu {
     color: white;
@@ -257,17 +262,17 @@ body {
   }
 
   .event-circle:nth-child(1) {
-    width: 300px;
-    height: 300px;
-    // position:absolute;
-    display: inline-block;
-    margin-left: -150px;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    // margin-left: -150px;
+    right: 70%;
     display: flex;
     align-items: center;
 
     div {
-      width: 290px;
-      height: 290px;
+      width: 230px;
+      height: 230px;
       margin: auto;
       border-radius: 100%;
       border: 1px solid $p5;
@@ -281,13 +286,10 @@ body {
   .event-circle:nth-child(2) {
     width: 150px;
     height: 150px;
-    // position:absolute;
-    // left:40%;
-    // margin-top:180px;
     display: inline;
     display: flex;
     align-items: center;
-    margin: 185px 5% 50px 5%;
+    margin: 135px 0 50px 30%;
 
     div {
       width: 140px;
@@ -303,12 +305,15 @@ body {
   .event-circle:nth-child(3) {
     width: 150px;
     height: 150px;
-    // position: absolute;
+    //     position: absolute;
     // right:-130px;
-    margin-top: 185px;
-    margin-right: -200px;
+    margin-top: 135px;
+    margin-right: -100%;
+    // margin-left: 5%;
     display: flex;
     align-items: center;
+    white-space: nowrap;
+
 
     div {
       width: 140px;
@@ -364,9 +369,9 @@ body {
   }
 
   .event-circle:nth-child(1) {
-    width: 50%;
+    width: 40%;
     height: auto;
-    padding-top: 50%;
+    padding-top: 40%;
     position: relative;
     margin-left: -150px;
 
@@ -423,6 +428,7 @@ body {
   padding: 100px 40px 40px 40px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   clear: both;
 
   h1 {
@@ -434,7 +440,9 @@ body {
 
   .event-explain {
     flex: 33%;
-    padding: 2%;
+    padding: 2.5%;
+    max-width: 450px;
+    // margin: 20px;
   }
 
   .event-circle {
@@ -612,5 +620,6 @@ body {
 
   .event-explain {
     margin-bottom: 20%;
+    margin: auto;
   }
 }

@@ -513,15 +513,6 @@ body {
   font-size: 1.1em;
 }
 
-.goback {
-  cursor: pointer;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
 .goback:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
@@ -724,5 +715,9 @@ body {
   to {
     opacity: 1;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 /*# sourceMappingURL=main.css.map */

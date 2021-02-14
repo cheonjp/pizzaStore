@@ -515,17 +515,12 @@ body {
   }
 }
 
-.goback {
-  cursor: pointer;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  transition: all 0.3s ease-in-out;
-}
+
 
 .goback:hover {
   transform: scale(1.15);
 }
+
 
 #menu-box {
   height: 100%;
@@ -706,4 +701,8 @@ body {
   to {
     opacity: 1;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
