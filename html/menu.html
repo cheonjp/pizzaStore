@@ -65,42 +65,51 @@
     <div class="background">
         <div id="menu-section">
             <div id="menus">
-                <h3 class="menu-sort">모든음식</h3>
-                <h3 class="menu-sort">에피타이저</h3>
-                <h3 class="menu-sort">피자</h3>
-                <h3 class="menu-sort">와인</h3>
+                <h3 class="menu-sort all" data-food="all">모든음식</h3>
+                <h3 class="menu-sort sidefood" data-food="side">에피타이저</h3>
+                <h3 class="menu-sort pizza" data-food="pizza">피자</h3>
+                <h3 class="menu-sort wine" data-food="wine">와인</h3>
             </div>
-
-            <div id="detail">
-                <div class="image">
-                    <img class="pizza-img" src="../img/pizza-1.png" alt="">
-                </div>
-                <div class="explain">
-                    <h3 id="menu-name">루꼴라파즈라 <span class="recommend">추천</span><span class="material-icons veggie">
-                            eco
-                        </span>
-                        <span class="material-icons btn left">
-                            arrow_back_ios_new
-                        </span>
-                        <span class="material-icons btn right">
-                            arrow_forward_ios
-                        </span>
-                    </h3>
-                    <p class="menu-introduction">
-                        토마토소스와 루꼴라의 콜라보레이션의 만남. 2mm의 얇은 도우와 애니타임의 스페셜 토마토소스를 첨가해 부담없이 즐길 수 있는 피자
-                    </p>
-                    <p class="ingredient">모짜렐라 치즈, 파프리카, 파인애플, 적양파,
-                        블랙올리브
-                    </p>
-                    <div class="buttons">
-                        <button class="large">22,000원</button>
-                        <button class="regular">17,000원</button>
+            <div id="modal">
+                <div class="flex">
+                    <div id="detail">
+                        <div class="image">
+                            <span class="material-icons close">
+                                close
+                            </span>
+                            <img class="pizza-img" src="../img/pizza-1.png" alt="">
+                        </div>
+                        <div class="explain">
+                            <h3 id="menu-name">루꼴라파즈라 <span class="recommend">추천</span><span
+                                    class="material-icons veggie">
+                                    eco
+                                </span>
+                            </h3>
+                            <span class="material-icons btn left">
+                                arrow_back_ios_new
+                            </span>
+                            <span class="material-icons btn right">
+                                arrow_forward_ios
+                            </span>
+                            <p class="menu-introduction">
+                                토마토소스와 루꼴라의 콜라보레이션의 만남. 2mm의 얇은 도우와 애니타임의 스페셜 토마토소스를 첨가해 부담없이 즐길 수 있는 피자
+                            </p>
+                            <p class="ingredient">모짜렐라 치즈, 파프리카, 파인애플, 적양파,
+                                블랙올리브
+                            </p>
+                            <div class="buttons">
+                                <button class="large">22,000원</button>
+                                <button class="regular">17,000원</button>
+                                <button class="button-normal">22,000원</button>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
 
             </div>
             <div id="items">
-                <div class="item">
+                <div class="item side">
                     <img class="item-img" src="../img/sidefood-1.png" alt="sidefood1">
                     <h4 class="item-name">에그시저샐러드<span class="material-icons veggie">
                             eco
@@ -109,27 +118,27 @@
                         드실수 있는 샐러드.
                     </p>
                     <p class='item-ingredient'>계란, 시저치즈, 상추, 배추, 드레싱</p>
-                    <h4 class="price">12,000원</h4>
+                    <h4 class="price"><span>12,000</span> 원</h4>
                 </div>
-                <div class="item">
+                <div class="item side">
                     <img class="item-img" src="../img/sidefood-2.png" alt="sidefood2">
                     <h4 class="item-name">토마토그라탕 <span class="recommend">추천</span></h4>
                     <p class=item-explain>치즈와, 토마토소스, 포테이토를 곁들어 만든 애니타임 최고의
                         에피타이저 음식으로 많은 사랑을 받고있는 심플한 음식.
                     </p>
                     <p class='item-ingredient'>토마토소스, 모짜레라치즈, 블랙올리브, 밀가루</p>
-                    <h4 class="price">15,000원</h4>
+                    <h4 class="price"><span>15,000</span> 원</h4>
                 </div>
-                <div class="item">
+                <div class="item side">
                     <img class="item-img" src="../img/sidefood-3.png" alt="sidefood3">
                     <h4 class="item-name">까르보나라</h4>
                     <p class=item-explain>애니타임의 까르보나라는 최고급 계란과 치즈, 우유를 재료로
                         맛이 더욱 풍부하고 부드러운 스파게티.
                     </p>
                     <p class='item-ingredient'>계란, 우유, 베이컨, 화이트소스, 마늘, 루꼴라</p>
-                    <h4 class="price">12,000원</h4>
+                    <h4 class="price"><span>12,000</span> 원</h4>
                 </div>
-                <div class="item">
+                <div class="item pizza">
                     <img class="item-img" src="../img/pizza-1.png" alt="pizza-1">
                     <h4 class="item-name">포테이토피자</h4>
                     <p class=item-explain>모짜레라치즈와 포테이토가 만나 더욱 맛있고 누구나 즐길 수 있는
@@ -137,11 +146,11 @@
                     </p>
                     <p class='item-ingredient'>모짜레라치즈, 포테이토, 햄, 그린올리브</p>
                     <div class="price-container">
-                        <h4 class="price L">L 22,000원</h4>
-                        <h4 class="price R">R 18,000원</h4>
+                        <h4 class="price L">L <span>22,000</span> 원</h4>
+                        <h4 class="price R">R <span>17,000</span> 원</h4>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item pizza">
                     <img class="item-img" src="../img/pizza-2.png" alt="pizza-2">
                     <h4 class="item-name">베이컨밤</h4>
                     <p class=item-explain>거대한 통 돼지고기 베이컨과 BBQ 소스가 만나 애니타임의 스페셜
@@ -149,11 +158,11 @@
                     </p>
                     <p class='item-ingredient'>베이컨, BBQ 소스, 마늘, 그린올리브, 햄, 포테이토, 시금치</p>
                     <div class="price-container">
-                        <h4 class="price L">L 25,000원</h4>
-                        <h4 class="price R">R 20,000원</h4>
+                        <h4 class="price L">L <span>25,000</span> 원</h4>
+                        <h4 class="price R">R <span>20,000</span> 원</h4>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item pizza">
                     <img class="item-img" src="../img/pizza-3.png" alt="pizza-3">
                     <h4 class="item-name">올가닉루꼴라<span class="material-icons veggie">
                             eco
@@ -162,22 +171,22 @@
                     </p>
                     <p class='item-ingredient'>루꼴라, 토마토소스, 블랙올리브, 모자렐라치즈, 고구마</p>>
                     <div class="price-container">
-                        <h4 class="price L">L 20,000원</h4>
-                        <h4 class="price R">R 15,000원</h4>
+                        <h4 class="price L">L <span>20,000</span> 원</h4>
+                        <h4 class="price R">R <span>15,000</span> 원</h4>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item pizza">
                     <img class="item-img" src="../img/pizza-5.png" alt="pizza-5">
                     <h4 class="item-name">콤비네이션</h4>
                     <p class=item-explain>여러가지 토핑이 풍부하고 골고루 첨가된 누구한테나 사랑 받는 피자
                     </p>
                     <p class='item-ingredient'>갈릭소스, 파프리카, 햄, 소고기, 임실치즈, 블랙올리브</p>
                     <div class="price-container">
-                        <h4 class="price L">L 22,000원</h4>
-                        <h4 class="price R">R 18,000원</h4>
+                        <h4 class="price L">L <span>22,000</span> 원</h4>
+                        <h4 class="price R">R <span>17,000</span> 원</h4>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item pizza">
                     <img class="item-img" src="../img/pizza-6.png" alt="pizza-6">
                     <h4 class="item-name">파자라</h4>
                     <p class=item-explain>애니타임의 스페셜 피자 파자라는 햄이 더욱 듬뿍 그리고 스페셜 갈릭 소스와
@@ -185,11 +194,11 @@
                     </p>
                     <p class='item-ingredient'>파프리카, 베이컨, 갈릭소스, 바베큐소스, 포테이토, 그린올리브</p>
                     <div class="price-container">
-                        <h4 class="price L">L 27,000원</h4>
-                        <h4 class="price R">R 22,000원</h4>
+                        <h4 class="price L">L <span>27,000</span> 원</h4>
+                        <h4 class="price R">R <span>12,000</span> 원</h4>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item pizza">
                     <img class="item-img" src="../img/pizza-8.png" alt="pizza-7">
                     <h4 class="item-name">더블스파이시루꼴라 <span class="recommend">추천</span><span
                             class="material-icons veggie">
@@ -200,11 +209,11 @@
                     </p>
                     <p class='item-ingredient'>루꼴라, 그린올리브, 블랙올리브, 갈릭소스, 스파이시소스, 청양고추</p>
                     <div class="price-container">
-                        <h4 class="price L">L 27,000원</h4>
-                        <h4 class="price R">R 22,000원</h4>
+                        <h4 class="price L">L <span>22,000</span> 원</h4>
+                        <h4 class="price R">R <span>17,000</span> 원</h4>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item pizza">
                     <img class="item-img" src="../img/pizza-7.png" alt="pizza-8">
                     <h4 class="item-name">머쉬룸러버<span class="material-icons veggie">
                             eco
@@ -214,22 +223,22 @@
                     </p>
                     <p class='item-ingredient'>마늘소스, 송이버섯, 팽이버섯, 이태리머쉬룸, 블랙올리브</p>
                     <div class="price-container">
-                        <h4 class="price L">L 27,000원</h4>
-                        <h4 class="price R">R 12,000원</h4>
+                        <h4 class="price L">L <span>25,000</span> 원</h4>
+                        <h4 class="price R">R <span>20,000</span> 원</h4>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item pizza">
                     <img class="item-img" src="../img/pizza-9.png" alt="pizza-9">
                     <h4 class="item-name">웰던비프</h4>
                     <p class=item-explain>잘익은 소고기와 BBQ 소스가 첨가된 달콤한 피자
                     </p>
                     <p class='item-ingredient'>BBQ소스, 소고기, 루꼴라, 블랙올리브, 모짜레라치즈</p>
                     <div class="price-container">
-                        <h4 class="price L">L 30,000원</h4>
-                        <h4 class="price R">R 25,000원</h4>
+                        <h4 class="price L">L <span>30,000</span> 원</h4>
+                        <h4 class="price R">R <span>25,000</span> 원</h4>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item pizza">
                     <img class="item-img" src="../img/pizza-10.png" alt="pizza-10">
                     <h4 class="item-name">No.1스파이시</h4>
                     <p class=item-explain>매운맛을 사랑하는 사람들 위한 청양고추, 아주 매운 핫 소스가
@@ -237,33 +246,33 @@
                     </p>
                     <p class='item-ingredient'>청양고추, 이태리 핫소스, 피망, 파프리카, 베이컨</p>
                     <div class="price-container">
-                        <h4 class="price L">L 25,000원</h4>
-                        <h4 class="price R">R 20,000원</h4>
+                        <h4 class="price L">L <span>23,000</span> 원</h4>
+                        <h4 class="price R">R <span>18,000</span> 원</h4>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item wine">
                     <img class="item-img" src="../img/wine-1.png" alt="wine-1">
                     <h4 class="item-name">란젠</h4>
                     <p class=item-explain>캐나다 오카나간벨리에서 수입한 고급 와인
                     </p>
                     <p class='item-ingredient'>레드와인</p>
-                    <h4 class="price">42,000원</h4>
+                    <h4 class="price"><span>42,000</span> 원</h4>
                 </div>
-                <div class="item">
+                <div class="item wine">
                     <img class="item-img" src="../img/wine-2.png" alt="wine-2">
                     <h4 class="item-name">레오파르도</h4>
                     <p class=item-explain>이태리 최고의 와이너리에서 탄생한 화이트와인
                     </p>
                     <p class='item-ingredient'>화이트와인</p>
-                    <h4 class="price">42,000원</h4>
+                    <h4 class="price"><span>44,000</span> 원</h4>
                 </div>
-                <div class="item">
+                <div class="item wine">
                     <img class="item-img" src="../img/wine-3.png" alt="wine-3">
                     <h4 class="item-name">써머힐</h4>
                     <p class=item-explain>캐나다 동부 써머힐 와이너리에서 수입한 최고급 와인
                     </p>
                     <p class='item-ingredient'>레드와인</p>
-                    <h4 class="price">55,000원</h4>
+                    <h4 class="price"><span>55,000</span> 원</h4>
                 </div>
             </div>
         </div>
@@ -301,7 +310,7 @@
     <span class="material-icons goback" style="font-size: 50px;">
         arrow_circle_up
     </span>
-
+    <script src="../js/menu.js"></script>
 </body>
 
 </html>

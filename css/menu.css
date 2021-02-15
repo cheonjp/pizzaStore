@@ -3,6 +3,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -77,7 +81,9 @@ body {
   background-color: #30260a;
   position: fixed;
   z-index: 10;
-  right: 100%;
+  left: -100%;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 #menu-box .menu {
@@ -174,9 +180,44 @@ body {
           transform: translate(0);
 }
 
+#menu-section #modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: rgba(50, 50, 50, 0.8);
+}
+
+#menu-section #modal .flex {
+  width: 90%;
+  height: 100%;
+  max-width: 1000px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #menu-section #detail {
   border-radius: 20px;
-  margin-top: 30px;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+#menu-section #detail .close {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  font-weight: bold;
 }
 
 #menu-section #detail .image {
@@ -184,11 +225,13 @@ body {
   background-size: cover;
   border-radius: 20px 20px 0 0;
   padding: 10px;
+  min-height: 150px;
 }
 
 #menu-section #detail .image .pizza-img {
   width: 50%;
-  max-width: 400px;
+  max-width: 350px;
+  min-width: 250px;
 }
 
 #menu-section #detail .explain {
@@ -212,12 +255,18 @@ body {
   position: absolute;
 }
 
-#menu-section #detail .explain #menu-name .left {
-  left: 0;
+#menu-section #detail .explain .left {
+  left: 10px;
+  bottom: 75%;
+  position: absolute;
+  cursor: pointer;
 }
 
-#menu-section #detail .explain #menu-name .right {
-  right: 0;
+#menu-section #detail .explain .right {
+  right: 10px;
+  bottom: 75%;
+  position: absolute;
+  cursor: pointer;
 }
 
 #menu-section #detail .explain .menu-introduction {
@@ -334,6 +383,50 @@ body {
           transform: translateX(-20%);
 }
 
+#menu-section #detail .button-normal {
+  border: 1px solid #a17402;
+  width: 150px;
+  height: 47px;
+  padding: 0;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  font-size: 17px;
+  font-family: "Noto Sans KR", "Arial";
+  background-color: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+#menu-section #detail .button-normal:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #a17402;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: .4s;
+  transition: .4s;
+  z-index: -1;
+}
+
+#menu-section #detail .button-normal:hover {
+  color: white;
+  z-index: 0;
+}
+
+#menu-section #detail .button-normal:hover:before {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
 #menu-section #detail .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,8 +453,8 @@ body {
 
 #menu-section #items .item {
   cursor: pointer;
-  margin: 20px;
-  max-width: 300px;
+  margin: 40px;
+  max-width: 320px;
 }
 
 #menu-section #items .item-name {

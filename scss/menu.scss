@@ -76,6 +76,10 @@ $font: "Noto Sans KR",
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     overflow-x: hidden;
@@ -145,7 +149,8 @@ body {
     background-color: $p6;
     position: fixed;
     z-index: 10;
-    right: 100%;
+    left: -100%;
+    transition: .3s ease-in-out;
 
     .menu {
         color: white;
@@ -237,20 +242,55 @@ body {
         }
     }
 
+    #modal {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+        background-color: rgba(50, 50, 50, 0.8);
+
+        .flex {
+            width: 90%;
+            height: 100%;
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+    }
+
     #detail {
         border-radius: 20px;
-        margin-top: 30px;
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+        position: relative;
+
+        // display: none;
+        .close {
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            font-weight: bold;
+        }
 
         .image {
             background-image: url('../img/table.jpg');
             background-size: cover;
             border-radius: 20px 20px 0 0;
             padding: 10px;
+            min-height: 150px;
 
 
             .pizza-img {
                 width: 50%;
-                max-width: 400px;
+                max-width: 350px;
+                min-width: 250px;
+
             }
         }
 
@@ -272,14 +312,20 @@ body {
                     color: black;
                     position: absolute;
                 }
+            }
 
-                .left {
-                    left: 0;
-                }
+            .left {
+                left: 10px;
+                bottom: 75%;
+                position: absolute;
+                cursor: pointer;
+            }
 
-                .right {
-                    right: 0;
-                }
+            .right {
+                right: 10px;
+                bottom: 75%;
+                position: absolute;
+                cursor: pointer;
             }
 
             .menu-introduction {
@@ -392,7 +438,47 @@ body {
             &:hover:before {
                 transform: translateX(-20%);
             }
+        }
 
+        .button-normal {
+            border: 1px solid $p5;
+            width: 150px;
+            height: 47px;
+            padding: 0;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            font-size: 17px;
+            font-family: $font;
+            background-color: none;
+            outline: none;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            margin-top: 8px;
+
+            &:before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: $p5;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                transform: translateX(100%);
+                transition: .4s;
+                z-index: -1;
+            }
+
+            &:hover {
+                color: white;
+                z-index: 0;
+            }
+
+            &:hover:before {
+                transform: translateX(0px);
+            }
         }
 
         .buttons {
@@ -412,8 +498,8 @@ body {
 
         .item {
             cursor: pointer;
-            margin: 20px;
-            max-width: 300px;
+            margin: 40px;
+            max-width: 320px;
 
         }
 
