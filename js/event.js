@@ -24,6 +24,5 @@
 
     toTop.addEventListener('click', function (e) {
         document.querySelector('html').scrollTop = 0
-        // document.documentElement.scrollTop = 0
     })
 })()
