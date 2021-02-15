@@ -513,6 +513,7 @@ body {
             color: white;
             font-family: $font;
             text-align: center;
+            height: 70px;
         }
 
         .price {
@@ -532,6 +533,7 @@ body {
         .item-ingredient {
             text-align: center;
             color: $p3;
+            height: 40px;
         }
 
         .price-container {
@@ -611,6 +613,141 @@ body {
 .veggie {
     color: green;
 }
+
+#purchase {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    // border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+
+
+    .cart {
+        margin: auto;
+        position: relative;
+
+    }
+
+    .number {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        color: white;
+        text-align: center;
+        border-radius: 50%;
+    }
+}
+
+#cart-list {
+    width: 100%;
+    // height: 100%;
+    max-height: 340px;
+    max-width: 280px;
+    background-color: rgb(129, 115, 98);
+    position: fixed;
+    top: -100%;
+    right: 0;
+    border-radius: 0 0 25px 25px;
+    padding: 0 20px 20px 20px;
+
+    .close-position {
+        position: relative;
+
+        .cart-list-close {
+            position: absolute;
+            right: 0;
+            font-size: 17px;
+            top: 10px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+
+    .cart-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .cartTitle {
+        text-align: center;
+        color: white;
+    }
+
+    .item-container {
+        width: 100%;
+        max-height: 170px;
+        margin-bottom: 15px;
+        // overflow: hidden;
+        overflow: auto;
+        position: relative;
+    }
+
+    img {
+        height: 40px;
+    }
+
+    .item-name {
+        color: white;
+        margin: 0 10px 0 10px;
+        width: 85px;
+        font-family: $font;
+    }
+
+    .item-price {
+        color: white;
+        font-family: $font;
+    }
+
+    .item-number {
+        font-weight: bold;
+    }
+
+    .item-totalMoney {
+        font-size: 17px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    .trash {
+        color: red;
+        margin-left: 3px;
+        cursor: pointer;
+    }
+
+    .buy {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        background-color: white;
+        margin-top: 15px;
+        background-color: $p3;
+        color: white;
+        font-size: 17px;
+        font-family: $font;
+        cursor: pointer;
+    }
+
+    .item-total-price {
+        color: white;
+        border-top: 1px solid rgb(220, 220, 220)
+    }
+}
+
 
 @media(max-width:700px) {
     #d-menu {

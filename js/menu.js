@@ -83,7 +83,7 @@
                 const priceBtn = document.createElement('BUTTON')
                 const price = itemArray[index].children[4].children[0].textContent
 
-                priceBtn.classList.add('button-normal')
+                priceBtn.classList.add('button-normal', 'btn-buy')
                 priceBtn.innerHTML = `${price} 원`
                 buttonContainer.innerHTML = ''
                 buttonContainer.appendChild(priceBtn)
@@ -98,7 +98,7 @@
                 const largeBtn = document.createElement('BUTTON')
                 const largePrice = itemArray[index].children[4].children[0].children[0].textContent
 
-                largeBtn.classList.add('large')
+                largeBtn.classList.add('large', 'btn-buy')
                 largeBtn.innerHTML = `${largePrice} 원`
                 buttonContainer.innerHTML = ''
                 buttonContainer.appendChild(largeBtn)
@@ -106,7 +106,7 @@
                 const regularBtn = document.createElement('BUTTON')
                 const regularPrice = itemArray[index].children[4].children[1].children[0].textContent
 
-                regularBtn.classList.add('regular')
+                regularBtn.classList.add('regular', 'btn-buy')
                 regularBtn.innerHTML = `${regularPrice} 원`
                 buttonContainer.appendChild(regularBtn)
             }
@@ -135,7 +135,7 @@
                         const priceBtn = document.createElement('BUTTON')
                         const price = itemArray[index].children[4].children[0].textContent
 
-                        priceBtn.classList.add('button-normal')
+                        priceBtn.classList.add('button-normal', 'btn-buy')
                         priceBtn.innerHTML = `${price} 원`
                         buttonContainer.innerHTML = ''
                         buttonContainer.appendChild(priceBtn)
@@ -149,7 +149,7 @@
                         const largeBtn = document.createElement('BUTTON')
                         const largePrice = itemArray[index].children[4].children[0].children[0].textContent
 
-                        largeBtn.classList.add('large')
+                        largeBtn.classList.add('large', 'btn-buy')
                         largeBtn.innerHTML = `${largePrice} 원`
                         buttonContainer.innerHTML = ''
                         buttonContainer.appendChild(largeBtn)
@@ -157,16 +157,31 @@
                         const regularBtn = document.createElement('BUTTON')
                         const regularPrice = itemArray[index].children[4].children[1].children[0].textContent
 
-                        regularBtn.classList.add('regular')
+                        regularBtn.classList.add('regular', 'btn-buy')
                         regularBtn.innerHTML = `${regularPrice} 원`
                         buttonContainer.appendChild(regularBtn)
                     }
-
+                    addCart(index, itemArray)
                 })
             })
-
+            addCart(index, itemArray)
         })
-
     })
 })();
+
+function addCart(number, itemInformation) {
+    const buttons = document.querySelectorAll('.btn-buy')
+    let itemInfo = {}
+
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function (e) {
+            const money = e.target.textContent
+            const finalMoney = money.slice(0, 6)
+            const itemImage = itemInformation[number].children[0].src
+            const itemName = itemInformation[number].children[1].textContent
+            console.log(finalMoney)
+
+        })
+    })
+}
 

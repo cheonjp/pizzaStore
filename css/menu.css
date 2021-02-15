@@ -467,6 +467,7 @@ body {
   color: white;
   font-family: "Noto Sans KR", "Arial";
   text-align: center;
+  height: 70px;
 }
 
 #menu-section #items .price {
@@ -486,6 +487,7 @@ body {
 #menu-section #items .item-ingredient {
   text-align: center;
   color: #d9643a;
+  height: 40px;
 }
 
 #menu-section #items .price-container {
@@ -568,6 +570,144 @@ body {
 
 .veggie {
   color: green;
+}
+
+#purchase {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+#purchase .cart {
+  margin: auto;
+  position: relative;
+}
+
+#purchase .number {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+}
+
+#cart-list {
+  width: 100%;
+  max-height: 340px;
+  max-width: 280px;
+  background-color: #817362;
+  position: fixed;
+  top: -100%;
+  right: 0;
+  border-radius: 0 0 25px 25px;
+  padding: 0 20px 20px 20px;
+}
+
+#cart-list .close-position {
+  position: relative;
+}
+
+#cart-list .close-position .cart-list-close {
+  position: absolute;
+  right: 0;
+  font-size: 17px;
+  top: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#cart-list .cart-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+#cart-list .cartTitle {
+  text-align: center;
+  color: white;
+}
+
+#cart-list .item-container {
+  width: 100%;
+  max-height: 170px;
+  margin-bottom: 15px;
+  overflow: auto;
+  position: relative;
+}
+
+#cart-list img {
+  height: 40px;
+}
+
+#cart-list .item-name {
+  color: white;
+  margin: 0 10px 0 10px;
+  width: 85px;
+  font-family: "Noto Sans KR", "Arial";
+}
+
+#cart-list .item-price {
+  color: white;
+  font-family: "Noto Sans KR", "Arial";
+}
+
+#cart-list .item-number {
+  font-weight: bold;
+}
+
+#cart-list .item-totalMoney {
+  font-size: 17px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+#cart-list .trash {
+  color: red;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+#cart-list .buy {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: white;
+  margin-top: 15px;
+  background-color: #d9643a;
+  color: white;
+  font-size: 17px;
+  font-family: "Noto Sans KR", "Arial";
+  cursor: pointer;
+}
+
+#cart-list .item-total-price {
+  color: white;
+  border-top: 1px solid gainsboro;
 }
 
 @media (max-width: 700px) {
