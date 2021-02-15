@@ -171,17 +171,74 @@
 
 function addCart(number, itemInformation) {
     const buttons = document.querySelectorAll('.btn-buy')
-    let itemInfo = {}
 
     buttons.forEach(function (button) {
         button.addEventListener('click', function (e) {
             const money = e.target.textContent
             const finalMoney = money.slice(0, 6)
             const itemImage = itemInformation[number].children[0].src
-            const itemName = itemInformation[number].children[1].textContent
-            console.log(finalMoney)
+            const itemName = itemInformation[number].children[1].innerHTML
 
+            const itemContainer = document.querySelector('.item-container')
+            const createItem = document.createElement('DIV')
+            createItem.classList.add('cart-item')
+            createItem.innerHTML = `<img src="${itemImage}" alt="">
+            <h5 class="item-name">${itemName}</h5>
+            <div class="item-price">${finalMoney}<span> 원</span></div>
+            <span class="material-icons trash">
+                delete
+            </span>`
+            itemContainer.appendChild(createItem)
+
+            total()
         })
     })
-}
+};
+
+function total() {
+    const moneyArray = []
+    const itemPrices = document.querySelectorAll('.item-price')
+    itemPrices.forEach(function (price) {
+        const onlyMoney = parseFloat(price.textContent) * 1000
+        moneyArray.push(onlyMoney)
+    })
+    const totalMoney = moneyArray.reduce(function (total, onlyMoney) {
+        total += onlyMoney
+        return total
+    }, 0)
+
+    const totalItem = document.querySelector('.item-number')
+    const sum = document.querySelector('.item-totalMoney')
+    const number = document.querySelector('.number')
+
+    totalItem.textContent = ` ${moneyArray.length} 개`
+    sum.textContent = totalMoney
+    number.textContent = moneyArray.length
+
+    if (moneyArray.length > 0) {
+        const purchase = document.querySelector('#purchase')
+        purchase.style.right = '20px'
+    }
+};
+
+(function () {
+    const purchase = document.querySelector('#purchase')
+    const cartList = document.querySelector('#cart-list')
+    purchase.addEventListener('click', function () {
+        purchase.style.right = '-100%'
+        setTimeout(function () {
+            cartList.style.top = '0'
+        }, 400)
+    })
+
+    const close = document.querySelector('.cart-list-close')
+
+    close.addEventListener('click', function () {
+        cartList.style.top = '-100%'
+        setTimeout(function () {
+            purchase.style.right = '20px'
+        }, 400)
+    })
+})()
+
 
