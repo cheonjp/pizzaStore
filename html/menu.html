@@ -39,22 +39,22 @@
                 <h2>애니타임</h2>
                 <p>언제나 어디서나 즐길수 있는 곳</p>
             </div>
-            <a href="">
+            <a href="./main.html">
                 <div class="menu"><span class="material-icons">
                         home
                     </span>홈</div>
             </a>
-            <a href="">
+            <a href="./event.html">
                 <div class="menu"><span class="material-icons">
                         event
                     </span>이벤트</div>
             </a>
-            <a href="">
+            <a href="./menu.html">
                 <div class="menu"><span class="material-icons">
                         restaurant
                     </span>메뉴</div>
             </a>
-            <a href="">
+            <a href="./contact.html">
                 <div class="menu"><span class="material-icons">
                         map
                     </span>찾아오시는 길</div>
@@ -63,6 +63,7 @@
         </div>
     </div>
     <div class="background">
+        <!-- 메뉴섹션 -->
         <div id="menu-section">
             <div id="menus">
                 <h3 class="menu-sort all" data-food="all">모든음식</h3>
@@ -70,10 +71,14 @@
                 <h3 class="menu-sort pizza" data-food="pizza">피자</h3>
                 <h3 class="menu-sort wine" data-food="wine">와인</h3>
             </div>
+            <!-- 모달창 -->
             <div id="modal">
+                <!-- DIV 세로 중앙 위치 -->
                 <div class="flex">
                     <div id="detail">
+                        <!-- 음식 배경 사진 -->
                         <div class="image">
+                            <!-- 닫기버튼 -->
                             <span class="material-icons close">
                                 close
                             </span>
@@ -85,29 +90,29 @@
                                     eco
                                 </span>
                             </h3>
+                            <!-- 좌/우 버튼 -->
                             <span class="material-icons btn left">
                                 arrow_back_ios_new
                             </span>
                             <span class="material-icons btn right">
                                 arrow_forward_ios
                             </span>
+                            <!-- 메뉴 소개 -->
                             <p class="menu-introduction">
                                 토마토소스와 루꼴라의 콜라보레이션의 만남. 2mm의 얇은 도우와 애니타임의 스페셜 토마토소스를 첨가해 부담없이 즐길 수 있는 피자
                             </p>
+                            <!-- 메뉴 재료 -->
                             <p class="ingredient">모짜렐라 치즈, 파프리카, 파인애플, 적양파,
                                 블랙올리브
                             </p>
                             <div class="buttons">
-                                <button class="large">22,000원</button>
-                                <button class="regular">17,000원</button>
-                                <button class="button-normal">22,000원</button>
                             </div>
                         </div>
                     </div>
-
                 </div>
 
             </div>
+            <!-- 아이템들 -->
             <div id="items">
                 <div class="item side">
                     <img class="item-img" src="../img/sidefood-1.png" alt="sidefood1">
@@ -277,6 +282,7 @@
             </div>
         </div>
     </div>
+    <!-- 풋터 -->
     <div id="footer">
         <a href="./main.html"><img src="../img/logo.png" alt="Logo"></a>
         <div id="icon-box">
@@ -307,17 +313,18 @@
         </div>
         <p>© 2021 Anytime pizza restaurant. All Rights Reserved.</p>
     </div>
+    <!-- 투탑 버튼 -->
     <span class="material-icons goback" style="font-size: 50px;">
         arrow_circle_up
     </span>
-
+    <!-- 장바구니 버튼 -->
     <div id="purchase">
         <span class="material-icons cart">
             shopping_cart
         </span>
         <span class="number"></span>
     </div>
-
+    <!-- 아이템 장바구니 내용 -->
     <div id="cart-list">
         <div class="close-position">
             <span class="material-icons cart-list-close">
@@ -326,14 +333,7 @@
         </div>
         <h4 class="cartTitle">장바구니</h4>
         <div class="item-container">
-            <!-- <div class="cart-item">
-                <img src="../img/pizza-1.png" alt="">
-                <h5 class="item-name">더블스파이시루꼴라</h5>
-                <div class="item-price">20,000<span> 원</span></div>
-                <span class="material-icons trash">
-                    delete
-                </span>
-            </div> -->
+
         </div>
         <div class="item-total-price">
             <span>총</span><span class="item-number"> </span><span style="margin-left:60px;">합계 : </span><span

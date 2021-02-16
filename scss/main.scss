@@ -371,7 +371,7 @@ body {
   max-width: 1700px;
   padding: 100px 40px 32px 40px;
 
-  h1 {
+  .section2-title {
     color: $p2;
     font-size: 2.5em;
     font-family: "Noto Serif KR", "Arial";
@@ -516,6 +516,14 @@ body {
 }
 
 
+
+.goback {
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
 
 .goback:hover {
   transform: scale(1.15);
@@ -691,6 +699,17 @@ body {
 
 .hide {
   display: none;
+}
+
+.scroll {
+  opacity: 0;
+  transform: translateY((100px));
+}
+
+.scroll-active {
+  opacity: 1;
+  transform: translateY((0px));
+  transition: .5s ease-in-out;
 }
 
 @keyframes changeOpacity {

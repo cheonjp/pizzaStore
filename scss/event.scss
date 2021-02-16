@@ -591,6 +591,17 @@ body {
   }
 }
 
+.scroll {
+  opacity: 0;
+  transform: translateY((100px));
+}
+
+.scroll-active {
+  opacity: 1;
+  transform: translateY((0px));
+  transition: .5s ease-in-out;
+}
+
 @media(min-width:700px) {
   .phone-menu {
     display: none;

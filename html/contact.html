@@ -38,22 +38,22 @@
                 <h2>애니타임</h2>
                 <p>언제나 어디서나 즐길수 있는 곳</p>
             </div>
-            <a href="">
+            <a href="./main.html">
                 <div class="menu"><span class="material-icons">
                         home
                     </span>홈</div>
             </a>
-            <a href="">
+            <a href="./event.html">
                 <div class="menu"><span class="material-icons">
                         event
                     </span>이벤트</div>
             </a>
-            <a href="">
+            <a href="./menu.html">
                 <div class="menu"><span class="material-icons">
                         restaurant
                     </span>메뉴</div>
             </a>
-            <a href="">
+            <a href="./contact.html">
                 <div class="menu"><span class="material-icons">
                         map
                     </span>찾아오시는 길</div>
@@ -64,21 +64,23 @@
 
     <!-- 사진 -->
     <img id="heroImg" src="../img/contact-hero.jpg" alt="restaurant">
+    <!-- 예약정보 -->
     <div id="booking-section">
         <h1>예약하기</h1>
         <p>지치고 힘든데 기다려야 한다구요? 바로 예약 하세요.
         </p>
         <hr>
         <form action="#">
+            <!-- 이름 -->
             <label for="name"><span>*</span>성함</label><br>
             <input type="text" id="name" name="fullname">
-
+            <!-- 전화번호 -->
             <label for="name"><span>*</span>전화번호</label><br>
             <input type="text" id="phone" name="phone">
-
+            <!-- 이메일 -->
             <label for="name"><span>*</span>이메일주소</label><br>
             <input type="text" id="email" name="email">
-
+            <!-- 날짜 -->
             <div class="dateTime">
                 <div class="date">
 
@@ -92,7 +94,7 @@
                 </div>
 
             </div>
-
+            <!-- 요구사항 -->
             <label for="memo">예약시 요구사항</label><br>
             <textarea name="require" id="require" cols="30" rows="10" placeholder="ex) 피자를 두 테이블로 나눠서 주세요 "></textarea>
             <button id="reservation" class="btn disabled" type="submit">
@@ -100,7 +102,8 @@
             </button>
         </form>
     </div>
-    <div id="location-section">
+    <!-- 구글맵 -->
+    <div id="location-section" class="scrollTarget">
         <div id="googlemap">
             <div class="mapouter">
                 <div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas"
@@ -126,6 +129,7 @@
                 </div>
             </div>
         </div>
+        <!-- 찾아오시는 길 -->
         <div id="address">
             <h1>찾아오시는 길</h1>
             <p>서울특별시 여의도동 ABCD 빌딩 102호</p>
@@ -179,7 +183,7 @@
     <span class="material-icons goback" style="font-size: 50px; color: #30260a">
         arrow_circle_up
     </span>
-
+    <!-- 예약 피드백 모달창 -->
     <div class="modal">
         <div class="flex">
             <div class="alert-box">
